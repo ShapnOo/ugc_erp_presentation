@@ -54,8 +54,8 @@ export default function Slide23_ExecutiveSummary() {
 
       {/* 4 Summary Cards Grid */}
       <div className="my-auto">
-        <p className="text-xs md:text-sm font-mono font-bold tracking-[0.2em] text-[#C5A059] uppercase font-sans mb-3">
-          FOUR REASONS OUR CONSORTIUM IS TURNKEY READY
+        <p className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#C5A059] uppercase font-sans mb-3">
+          FOUR REASONS OUR CONSORTIUM IS PROVEN & READY TO BUILD
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -81,7 +81,7 @@ export default function Slide23_ExecutiveSummary() {
       </div>
 
       {/* Footer */}
-      <div className="pt-2 border-t-2 border-slate-300 text-xs md:text-sm text-slate-800 font-mono font-bold flex justify-between">
+      <div className="pt-2 border-t-2 border-slate-300 text-xs md:text-sm text-slate-800 font-bold flex justify-between font-sans">
         <span>22 · EXECUTIVE SUMMARY · SYSTECH × PAKIZA LIMITED</span>
         <span className="text-[#C5A059]">VALUE PROPOSITION</span>
       </div>

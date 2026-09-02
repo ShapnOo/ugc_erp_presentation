@@ -93,7 +93,7 @@ export default function Slide1_Cover() {
             <span className="w-2.5 h-2.5 rounded-full bg-[#05A872] animate-pulse"></span>
             OUR FIVE FLAGSHIP PLATFORMS
           </p>
-          <span className="text-xs md:text-sm font-mono text-slate-200 font-bold">COMPLETE TURNKEY SOLUTION</span>
+          <span className="text-xs md:text-sm font-sans text-slate-200 font-bold uppercase tracking-wider">COMPLETE 5-PLATFORM SUITE</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-3.5">

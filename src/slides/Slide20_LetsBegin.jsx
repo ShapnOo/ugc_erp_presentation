@@ -29,7 +29,7 @@ export default function Slide20_LetsBegin() {
     {
       num: '04',
       title: 'Team Mobilisation',
-      desc: 'Once awarded — immediate Day-1 deployment of our local engineering team.',
+      desc: 'Once awarded — phased Day-1 mobilization of our local discovery & engineering squad.',
       badge: 'PHASE 04',
       borderColor: 'border-blue-500/80 hover:border-blue-400',
       numColor: 'text-blue-400'
@@ -37,7 +37,7 @@ export default function Slide20_LetsBegin() {
   ];
 
   const valueSummary = [
-    { label: '5 FLAGSHIP PLATFORMS', val: 'UGC ERP, UMS-ERP, AMS, Nexus & GMS built as one system.' },
+    { label: '5 FLAGSHIP PLATFORMS', val: 'UGC ERP, UMS-ERP, AMS, Nexus & GMS co-developed into one system.' },
     { label: '100% LOCAL ON-GROUND TEAM', val: 'Dhaka-based engineering team with zero offshore dependency.' },
     { label: '3-YEAR POST-GO-LIVE SLA', val: '99.9% guaranteed uptime SLA & 24-hour query clearance.' },
     { label: 'SINGLE SIGN-ON READY', val: 'BdREN TIGERfed SSO integrated across all 8 divisions.' }
@@ -68,7 +68,7 @@ export default function Slide20_LetsBegin() {
         </h1>
 
         <p className="font-serif italic text-slate-200 text-lg md:text-2xl max-w-4xl font-medium">
-          A turnkey partnership built around five integrated platforms, shared national ambition, and long-term commitment.
+          A collaborative partnership uniting existing core software assets with custom development and long-term commitment.
         </p>
       </div>
 

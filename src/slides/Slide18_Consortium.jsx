@@ -103,7 +103,7 @@ export default function Slide18_Consortium() {
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-[#05A872] font-bold text-base">✓</span>
-                <span>Turnkey research grant & admission lifecycle automation</span>
+                <span>End-to-end research grant & admission lifecycle automation</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-[#05A872] font-bold text-base">✓</span>
