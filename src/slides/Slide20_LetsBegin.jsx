@@ -7,7 +7,7 @@ export default function Slide20_LetsBegin() {
       title: 'Discovery & Alignment',
       desc: 'Detailed review of UGC requirements, constraints, and evaluation criteria.',
       badge: 'PHASE 01',
-      borderColor: 'hover:border-[#05A872]',
+      borderColor: 'border-[#05A872]/80 hover:border-[#05A872]',
       numColor: 'text-[#05A872]'
     },
     {
@@ -15,7 +15,7 @@ export default function Slide20_LetsBegin() {
       title: 'Technical Demo',
       desc: 'Live walkthrough of our 5 platforms, microservices architecture, and SSO.',
       badge: 'PHASE 02',
-      borderColor: 'hover:border-[#C5A059]',
+      borderColor: 'border-[#C5A059]/80 hover:border-[#C5A059]',
       numColor: 'text-[#C5A059]'
     },
     {
@@ -23,7 +23,7 @@ export default function Slide20_LetsBegin() {
       title: 'Bid Conference',
       desc: 'Joint review of project governance, 3-year SLA commitment, and phasing.',
       badge: 'PHASE 03',
-      borderColor: 'hover:border-red-500',
+      borderColor: 'border-red-500/80 hover:border-red-500',
       numColor: 'text-red-500'
     },
     {
@@ -31,7 +31,7 @@ export default function Slide20_LetsBegin() {
       title: 'Team Mobilisation',
       desc: 'Once awarded — immediate Day-1 deployment of our local engineering team.',
       badge: 'PHASE 04',
-      borderColor: 'hover:border-blue-400',
+      borderColor: 'border-blue-500/80 hover:border-blue-400',
       numColor: 'text-blue-400'
     }
   ];
@@ -45,7 +45,7 @@ export default function Slide20_LetsBegin() {
 
   return (
     <div className="relative w-full h-full bg-[#0B131F] text-slate-100 p-8 md:p-12 flex flex-col justify-between overflow-hidden select-none font-sans">
-      {/* Soft Ambient Radial Glow Effects (Subtle & Elegant) */}
+      {/* Soft Ambient Radial Glow Effects */}
       <div className="absolute top-0 left-0 w-[650px] h-[650px] bg-[#05A872]/15 rounded-full blur-[150px] pointer-events-none -translate-x-1/3 -translate-y-1/3"></div>
       <div className="absolute bottom-0 right-0 w-[650px] h-[650px] bg-[#C5A059]/15 rounded-full blur-[150px] pointer-events-none translate-x-1/3 translate-y-1/3"></div>
 
@@ -53,13 +53,13 @@ export default function Slide20_LetsBegin() {
       <div className="relative z-10 space-y-2">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-5 h-[2px] bg-[#C5A059]"></div>
-            <span className="text-xs font-bold tracking-[0.2em] text-[#C5A059] uppercase font-sans">
+            <div className="w-6 h-[3px] bg-[#C5A059]"></div>
+            <span className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#C5A059] uppercase font-sans">
               NEXT STEPS · EXECUTIVE SUMMARY & PATH FORWARD
             </span>
           </div>
-          <span className="text-[10px] font-mono font-bold text-[#05A872] bg-emerald-950/80 border border-emerald-800 px-3 py-1 rounded-md shadow-sm">
-            ● READY FOR IMMEDIATE MOBILISATION
+          <span className="text-xs md:text-sm font-bold text-slate-300 font-sans tracking-wide">
+            RECOMMENDED PROGRAMME MOBILISATION
           </span>
         </div>
 
@@ -67,49 +67,39 @@ export default function Slide20_LetsBegin() {
           Let's <span className="text-[#C5A059] font-serif italic font-black">Begin.</span>
         </h1>
 
-        <p className="font-serif italic text-slate-200 text-base md:text-xl max-w-4xl font-normal">
+        <p className="font-serif italic text-slate-200 text-lg md:text-2xl max-w-4xl font-medium">
           A turnkey partnership built around five integrated platforms, shared national ambition, and long-term commitment.
         </p>
       </div>
 
-      {/* SECTION 1: 4-STEP WORKFLOW PIPELINE WITH CLEAN SUBTLE SVG DATA RAYS */}
-      <div className="relative z-10 my-auto py-2 space-y-3">
+      {/* SECTION 1: 4-STEP WORKFLOW PIPELINE IN 2x2 GRID (LARGE CRISP FONTS) */}
+      <div className="relative z-10 my-auto py-1 space-y-2.5">
         <div className="flex items-center justify-between">
-          <p className="text-[10px] font-mono font-bold tracking-[0.25em] text-[#C5A059] uppercase flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#05A872]"></span>
+          <p className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#C5A059] uppercase font-sans">
             OUR RECOMMENDED PATH FORWARD
           </p>
-          <span className="text-[10px] font-mono text-slate-400">4-STAGE MOBILISATION ROADMAP</span>
         </div>
 
-        {/* 4 Pipeline Cards Stage */}
-        <div className="relative grid grid-cols-1 md:grid-cols-4 gap-4">
-          
-          {/* Subtle Dashflow Ray Lines connecting steps */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 hidden md:block">
-            <line x1="23%" y1="50%" x2="27%" y2="50%" stroke="#05A872" strokeWidth="2" className="animated-dash-line" opacity="0.6" />
-            <line x1="48%" y1="50%" x2="52%" y2="50%" stroke="#C5A059" strokeWidth="2" className="animated-dash-line" opacity="0.6" />
-            <line x1="73%" y1="50%" x2="77%" y2="50%" stroke="#D32F2F" strokeWidth="2" className="animated-dash-line" opacity="0.6" />
-          </svg>
-
+        {/* 2x2 Grid Layout for Maximum Width & Huge Readable Font Sizes */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {pathForwardSteps.map((step) => (
             <div
               key={step.num}
-              className={`relative z-10 bg-[#0E1726]/90 border border-slate-800/90 ${step.borderColor} p-5 rounded-2xl shadow-xl flex flex-col justify-between h-44 transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer backdrop-blur-md`}
+              className={`relative z-10 bg-[#0E1726]/95 border-2 ${step.borderColor} p-5 px-6 rounded-2xl shadow-xl flex items-start gap-4 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer backdrop-blur-md`}
             >
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className={`font-serif text-3xl font-black ${step.numColor}`}>
-                    {step.num}
-                  </span>
-                  <span className="text-[9px] font-mono font-bold px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300 uppercase">
+              <span className={`font-serif text-4xl md:text-5xl font-black ${step.numColor} leading-none shrink-0`}>
+                {step.num}
+              </span>
+              <div className="flex-1">
+                <div className="flex items-center justify-between mb-1">
+                  <h3 className="font-serif font-black text-xl md:text-2xl text-white leading-tight">
+                    {step.title}
+                  </h3>
+                  <span className="text-xs font-bold px-2.5 py-0.5 rounded bg-slate-900 border border-slate-700 text-slate-200 uppercase shrink-0 font-sans">
                     {step.badge}
                   </span>
                 </div>
-                <h3 className="font-serif font-black text-lg text-white leading-tight mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-xs text-slate-300 leading-relaxed font-sans font-light">
+                <p className="text-sm md:text-base text-slate-100 leading-relaxed font-sans font-bold">
                   {step.desc}
                 </p>
               </div>
@@ -118,14 +108,14 @@ export default function Slide20_LetsBegin() {
         </div>
       </div>
 
-      {/* SECTION 2: 4 VALUE SUMMARY CARDS (CLEAN & ELEGANT) */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-4 gap-3 font-sans my-1">
+      {/* SECTION 2: 4 VALUE SUMMARY CARDS IN 2x2 GRID (HIGH-CONTRAST BOLD FONTS) */}
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-3.5 font-sans mt-2 mb-4">
         {valueSummary.map((val, idx) => (
-          <div key={idx} className="bg-[#091526] border border-slate-800 p-3.5 rounded-xl flex flex-col justify-between shadow-lg hover:border-[#05A872]/60 transition-colors">
-            <span className="text-[9px] font-mono font-bold text-[#05A872] uppercase tracking-wider block mb-1">
+          <div key={idx} className="bg-[#091526] border-2 border-slate-800 p-4 px-5 rounded-xl flex items-center justify-between shadow-lg hover:border-[#05A872] transition-colors">
+            <span className="text-xs md:text-sm font-bold text-[#05A872] uppercase tracking-wider shrink-0 w-1/3 font-sans">
               {val.label}
             </span>
-            <p className="text-xs text-slate-200 font-normal leading-snug">
+            <p className="text-sm md:text-base text-white font-bold leading-snug w-2/3 text-right font-sans">
               {val.val}
             </p>
           </div>
@@ -133,25 +123,22 @@ export default function Slide20_LetsBegin() {
       </div>
 
       {/* SECTION 3: ELEGANT GOLD EXECUTIVE CLOSING BANNER */}
-      <div className="relative z-10 bg-[#C5A059] text-slate-950 -mx-8 -mb-8 md:-mx-12 md:-mb-12 p-4 px-8 md:px-12 flex justify-between items-center font-sans shadow-2xl border-t border-amber-300">
+      <div className="relative z-10 bg-[#C5A059] text-slate-950 -mx-8 -mb-8 md:-mx-12 md:-mb-12 p-4 px-8 md:px-12 flex items-center justify-between font-sans shadow-2xl border-t-2 border-amber-300">
         <div>
-          <h4 className="font-serif font-black text-base md:text-lg uppercase tracking-tight text-slate-950">
+          <h4 className="font-serif font-black text-lg md:text-xl uppercase tracking-tight text-slate-950 leading-tight">
             SYSTECH DIGITAL × PAKIZA SOFTWARE — JOINT VENTURE
           </h4>
-          <p className="text-[10px] font-mono font-bold tracking-widest text-slate-900 uppercase">
+          <p className="text-xs font-bold tracking-widest text-slate-950 uppercase mt-0.5 font-sans">
             VENDOR PROPOSAL · NATIONAL HIGHER EDUCATION DIGITAL SUITE
           </p>
         </div>
 
-        <div className="font-serif italic text-base md:text-lg font-black text-slate-950 text-center">
+        <div className="font-serif italic text-lg md:text-xl font-black text-slate-950 text-center px-4">
           "Thank you · We are ready to transform higher education together."
         </div>
 
-        <div className="text-right">
-          <span className="font-serif font-black text-sm block">Let's Build</span>
-          <span className="text-[9px] font-mono font-bold tracking-widest text-slate-900 uppercase bg-slate-950 text-[#C5A059] px-2 py-0.5 rounded shadow-sm">
-            IMMEDIATE MOBILISATION READY
-          </span>
+        <div className="text-right flex flex-col items-end shrink-0">
+          <span className="font-serif font-black text-base text-slate-950 uppercase tracking-tight">Systech × Pakiza JV</span>
         </div>
       </div>
     </div>

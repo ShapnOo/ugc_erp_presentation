@@ -2,18 +2,18 @@ import React from 'react';
 
 export default function Slide1_Cover() {
   const platforms = [
-    { code: '01 UGC ERP', title: 'Central Governance', desc: '11 core modules for UGC internal administration & Ministry reporting.', color: 'border-red-500/60 bg-red-950/40 text-red-400', tag: 'GOVERNANCE' },
-    { code: '02 UMS-ERP', title: 'University Management', desc: '18 modules covering complete student lifecycle & university operations.', color: 'border-blue-500/60 bg-blue-950/40 text-blue-400', tag: 'UNIVERSITY' },
-    { code: '03 AMS', title: 'Admission System', desc: 'High-speed admission system handling 1M+ applicants at the same time.', color: 'border-emerald-500/60 bg-emerald-950/40 text-[#05A872]', tag: 'ADMISSION' },
-    { code: '04 NEXUS', title: 'Matchmaking Hub', desc: 'Smart matchmaking connecting students, faculty, universities & industry.', color: 'border-amber-500/60 bg-amber-950/40 text-[#C5A059]', tag: 'MATCHMAKING' },
-    { code: '05 GMS', title: 'Grants Management', desc: 'End-to-end research grant workflow from application to final audit.', color: 'border-emerald-500/60 bg-emerald-950/40 text-emerald-400', tag: 'GRANTS' },
+    { code: '01 UGC ERP', title: 'Central Governance', desc: '11 core modules for UGC internal administration & Ministry reporting.', color: 'border-red-500 bg-red-950/70 text-red-400', tag: 'GOVERNANCE' },
+    { code: '02 UMS-ERP', title: 'University Management', desc: '18 modules covering complete student lifecycle & university operations.', color: 'border-blue-500 bg-blue-950/70 text-blue-400', tag: 'UNIVERSITY' },
+    { code: '03 AMS', title: 'Admission System', desc: 'High-speed admission system handling 1M+ applicants at the same time.', color: 'border-emerald-500 bg-emerald-950/70 text-[#05A872]', tag: 'ADMISSION' },
+    { code: '04 NEXUS', title: 'Matchmaking Hub', desc: 'Smart matchmaking connecting students, faculty, universities & industry.', color: 'border-amber-500 bg-amber-950/70 text-[#C5A059]', tag: 'MATCHMAKING' },
+    { code: '05 GMS', title: 'Grants Management', desc: 'End-to-end research grant workflow from application to final audit.', color: 'border-emerald-500 bg-emerald-950/70 text-emerald-400', tag: 'GRANTS' },
   ];
 
   const highlights = [
     { label: 'SINGLE SIGN-ON', val: 'BdREN TIGERfed SSO' },
     { label: 'NATIONWIDE ROLLOUT', val: 'All 8 Divisions' },
     { label: 'SECURITY & AUDIT', val: 'Central Tamper-Proof Log' },
-    { label: 'TECHNICAL SYSTEM', val: 'Modular Architecture & API Gateway' },
+    { label: 'TECHNICAL SYSTEM', val: 'Modular API Gateway' },
   ];
 
   return (
@@ -27,13 +27,13 @@ export default function Slide1_Cover() {
         {/* Sub-header Vendor Tag */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <div className="w-1.5 h-6 bg-[#05A872] rounded-full"></div>
-            <span className="text-[11px] font-mono font-bold tracking-[0.25em] text-[#C5A059] uppercase bg-slate-900/90 border border-slate-800 px-3.5 py-1 rounded-md shadow-sm">
+            <div className="w-2.5 h-6 bg-[#05A872] rounded-full"></div>
+            <span className="text-xs md:text-sm font-mono font-bold tracking-[0.2em] text-[#C5A059] uppercase bg-slate-900 border border-slate-700 px-3.5 py-1 rounded-md shadow-sm">
               SYSTECH DIGITAL × PAKIZA SOFTWARE LIMITED · JV PROPOSAL
             </span>
           </div>
 
-          <span className="text-[10px] font-mono font-bold text-[#05A872] bg-emerald-950/80 border border-emerald-800 px-3 py-1 rounded-md">
+          <span className="text-xs md:text-sm font-mono font-bold text-[#05A872] bg-emerald-950/90 border border-emerald-700 px-3.5 py-1 rounded-md shadow-sm">
             ● NATIONAL DIGITAL SUITE PROPOSAL
           </span>
         </div>
@@ -49,36 +49,36 @@ export default function Slide1_Cover() {
               </span>
             </h1>
 
-            <p className="font-serif italic text-xl md:text-2xl text-slate-200 font-normal leading-snug">
+            <p className="font-serif italic text-xl md:text-3xl text-slate-100 font-bold leading-snug">
               Five integrated platforms. One national transformation across Bangladesh.
             </p>
           </div>
 
           {/* Right Scope Metric Cards */}
           <div className="col-span-12 lg:col-span-4 grid grid-cols-2 gap-3 font-sans">
-            <div className="col-span-2 bg-[#062322] border border-[#05A872]/40 rounded-2xl p-5 shadow-2xl relative overflow-hidden hover-float">
-              <p className="text-[10px] font-mono font-bold tracking-[0.25em] text-[#C5A059] uppercase mb-1">
+            <div className="col-span-2 bg-[#062322] border-2 border-[#05A872]/80 rounded-2xl p-5 shadow-2xl relative overflow-hidden hover-float">
+              <p className="text-xs md:text-sm font-mono font-bold tracking-[0.2em] text-[#C5A059] uppercase mb-1">
                 NATIONAL PROGRAMME SCOPE
               </p>
               <div className="flex items-baseline gap-3">
                 <span className="font-serif text-7xl font-black text-[#05A872] leading-none">18</span>
                 <div>
-                  <h3 className="text-base font-bold text-white font-serif leading-tight">University Modules</h3>
-                  <p className="text-[10px] text-slate-300 font-mono">FULLY INTEGRATED</p>
+                  <h3 className="text-lg md:text-xl font-bold text-white font-serif leading-tight">University Modules</h3>
+                  <p className="text-xs md:text-sm text-slate-100 font-mono font-bold">FULLY INTEGRATED</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-[#091526] border border-[#C5A059]/40 rounded-xl p-3.5 shadow-xl hover-float">
-              <span className="font-serif text-2xl font-black text-[#C5A059] block leading-none">11</span>
-              <span className="text-[9px] font-mono uppercase tracking-wider text-slate-300 font-bold mt-1 block">
+            <div className="bg-[#091526] border-2 border-[#C5A059]/80 rounded-xl p-4 shadow-xl hover-float">
+              <span className="font-serif text-4xl font-black text-[#C5A059] block leading-none">11</span>
+              <span className="text-xs md:text-sm font-mono uppercase tracking-wider text-slate-100 font-bold mt-1 block">
                 Governance Modules
               </span>
             </div>
 
-            <div className="bg-[#091526] border border-blue-500/40 rounded-xl p-3.5 shadow-xl hover-float">
-              <span className="font-serif text-2xl font-black text-blue-400 block leading-none">10+</span>
-              <span className="text-[9px] font-mono uppercase tracking-wider text-slate-300 font-bold mt-1 block">
+            <div className="bg-[#091526] border-2 border-blue-500/80 rounded-xl p-4 shadow-xl hover-float">
+              <span className="font-serif text-4xl font-black text-blue-400 block leading-none">10+</span>
+              <span className="text-xs md:text-sm font-mono uppercase tracking-wider text-slate-100 font-bold mt-1 block">
                 Anchor Universities
               </span>
             </div>
@@ -89,28 +89,28 @@ export default function Slide1_Cover() {
       {/* MIDDLE SECTION — 5 FLAGSHIP PLATFORM CARDS */}
       <div className="relative z-10 my-auto pt-2 space-y-2">
         <div className="flex items-center justify-between">
-          <p className="text-[10px] font-mono font-bold tracking-[0.25em] text-[#C5A059] uppercase flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#05A872] animate-pulse"></span>
+          <p className="text-xs md:text-sm font-mono font-bold tracking-[0.2em] text-[#C5A059] uppercase flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#05A872] animate-pulse"></span>
             OUR FIVE FLAGSHIP PLATFORMS
           </p>
-          <span className="text-[10px] font-mono text-slate-400">COMPLETE TURNKEY SOLUTION</span>
+          <span className="text-xs md:text-sm font-mono text-slate-200 font-bold">COMPLETE TURNKEY SOLUTION</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-3.5">
           {platforms.map((p) => (
             <div
               key={p.code}
-              className={`border ${p.color} p-4 rounded-xl shadow-lg flex flex-col justify-between h-36 hover-float cursor-pointer`}
+              className={`border-2 ${p.color} p-4 rounded-xl shadow-lg flex flex-col justify-between min-h-[175px] hover-float cursor-pointer`}
             >
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-serif font-black text-base text-white">{p.code}</span>
-                  <span className="text-[8px] font-mono font-bold px-1.5 py-0.5 rounded bg-black/40 text-slate-300 uppercase">
+                  <span className="font-serif font-black text-lg md:text-xl text-white">{p.code}</span>
+                  <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-black/80 text-white uppercase">
                     {p.tag}
                   </span>
                 </div>
-                <h4 className="text-xs font-bold text-white mb-1.5 font-sans">{p.title}</h4>
-                <p className="text-[10px] text-slate-300 font-sans leading-relaxed font-light">
+                <h4 className="text-base font-bold text-white mb-1.5 font-sans">{p.title}</h4>
+                <p className="text-xs md:text-sm text-slate-100 font-sans leading-relaxed font-bold">
                   {p.desc}
                 </p>
               </div>
@@ -120,24 +120,24 @@ export default function Slide1_Cover() {
       </div>
 
       {/* KEY HIGHLIGHTS BAR */}
-      <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-3 font-mono text-[10px]">
+      <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-3 font-mono text-xs md:text-sm">
         {highlights.map((h, idx) => (
-          <div key={idx} className="bg-[#071322] border border-slate-800 p-2.5 px-4 rounded-xl flex items-center justify-between shadow-sm">
-            <span className="text-slate-400 uppercase font-bold">{h.label}:</span>
-            <span className="text-[#05A872] font-bold">{h.val}</span>
+          <div key={idx} className="bg-[#071322] border-2 border-slate-700 p-3 px-4 rounded-xl flex items-center justify-between shadow-sm">
+            <span className="text-slate-200 uppercase font-bold">{h.label}:</span>
+            <span className="text-[#05A872] font-black">{h.val}</span>
           </div>
         ))}
       </div>
 
       {/* BOTTOM FOOTER */}
-      <div className="relative z-10 pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400 font-mono">
-        <div className="font-bold tracking-wider uppercase text-slate-300">
+      <div className="relative z-10 pt-3 border-t-2 border-slate-800 flex items-center justify-between text-xs md:text-sm text-slate-200 font-mono font-bold">
+        <div className="tracking-wider uppercase text-slate-200">
           PROPOSED BY THE SYSTECH × PAKIZA JV
         </div>
-        <div className="font-serif italic text-slate-400">
+        <div className="font-serif italic text-slate-200 text-sm md:text-base font-bold">
           For: National Higher Education Authority
         </div>
-        <div className="font-bold tracking-widest text-slate-200 uppercase text-[10px]">
+        <div className="tracking-widest text-slate-100 uppercase">
           SYSTECH × PAKIZA <span className="text-[#C5A059]">JOINT VENTURE</span>
         </div>
       </div>

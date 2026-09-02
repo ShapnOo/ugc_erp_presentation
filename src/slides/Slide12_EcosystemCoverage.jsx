@@ -17,8 +17,8 @@ export default function Slide12_EcosystemCoverage() {
       {/* Top Header */}
       <div>
         <div className="flex items-center gap-2 mb-3">
-          <div className="w-5 h-[2px] bg-[#2563EB]"></div>
-          <span className="text-[11px] font-bold tracking-[0.2em] text-[#2563EB] uppercase font-sans">
+          <div className="w-6 h-[3px] bg-[#2563EB]"></div>
+          <span className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#2563EB] uppercase font-sans">
             OUR UMS-ERP FUNCTIONAL COVERAGE
           </span>
         </div>
@@ -27,7 +27,7 @@ export default function Slide12_EcosystemCoverage() {
           Complete University <span className="text-[#2563EB] font-serif italic font-black">Digital Ecosystem</span>
         </h1>
 
-        <p className="font-serif italic text-slate-600 text-base md:text-lg max-w-4xl font-normal">
+        <p className="font-serif italic text-slate-700 text-lg md:text-2xl max-w-4xl font-medium">
           From student admission to alumni relations, paired with complete institutional, academic, and campus administration.
         </p>
       </div>
@@ -35,18 +35,18 @@ export default function Slide12_EcosystemCoverage() {
       {/* Content Columns */}
       <div className="grid grid-cols-12 gap-6 my-auto items-stretch">
         {/* Left: Academic Lifecycle (6 cols) */}
-        <div className="col-span-12 lg:col-span-6 bg-white border border-slate-200 p-6 rounded-2xl shadow-sm space-y-4">
-          <div className="flex items-center justify-between border-b border-slate-200 pb-2">
-            <h3 className="font-serif font-black text-xl text-[#2563EB]">
+        <div className="col-span-12 lg:col-span-6 bg-white border-2 border-slate-300 p-6 rounded-2xl shadow-sm space-y-4">
+          <div className="flex items-center justify-between border-b-2 border-slate-200 pb-2">
+            <h3 className="font-serif font-black text-2xl text-[#2563EB]">
               Academic Lifecycle (8 Stages)
             </h3>
-            <span className="text-[10px] font-mono text-slate-400 uppercase">STUDENT JOURNEY</span>
+            <span className="text-xs font-mono font-bold text-slate-800 uppercase">STUDENT JOURNEY</span>
           </div>
 
-          <div className="grid grid-cols-2 gap-2 font-sans">
+          <div className="grid grid-cols-2 gap-2.5 font-sans">
             {lifecycleStages.map((s, idx) => (
-              <div key={idx} className="bg-slate-50 border border-slate-200 p-2.5 rounded-lg text-xs font-semibold text-slate-800 flex items-center gap-2">
-                <span className="font-mono text-[10px] text-blue-600 font-bold">0{idx + 1}</span>
+              <div key={idx} className="bg-slate-50 border border-slate-300 p-3 rounded-lg text-sm md:text-base font-bold text-slate-900 flex items-center gap-2.5">
+                <span className="font-mono text-xs text-blue-700 font-black">0{idx + 1}</span>
                 <span>{s}</span>
               </div>
             ))}
@@ -54,18 +54,18 @@ export default function Slide12_EcosystemCoverage() {
         </div>
 
         {/* Right: Institutional Modules (6 cols) */}
-        <div className="col-span-12 lg:col-span-6 bg-white border border-slate-200 p-6 rounded-2xl shadow-sm space-y-4">
-          <div className="flex items-center justify-between border-b border-slate-200 pb-2">
-            <h3 className="font-serif font-black text-xl text-slate-900">
+        <div className="col-span-12 lg:col-span-6 bg-white border-2 border-slate-300 p-6 rounded-2xl shadow-sm space-y-4">
+          <div className="flex items-center justify-between border-b-2 border-slate-200 pb-2">
+            <h3 className="font-serif font-black text-2xl text-slate-950">
               Institutional Operations (10 Modules)
             </h3>
-            <span className="text-[10px] font-mono text-slate-400 uppercase">ADMIN & RESOURCES</span>
+            <span className="text-xs font-mono font-bold text-slate-800 uppercase">ADMIN & RESOURCES</span>
           </div>
 
-          <div className="grid grid-cols-2 gap-2 font-sans">
+          <div className="grid grid-cols-2 gap-2.5 font-sans">
             {institutionalModules.map((m, idx) => (
-              <div key={idx} className="bg-slate-50 border border-slate-200 p-2.5 rounded-lg text-xs font-semibold text-slate-800 flex items-center gap-2">
-                <span className="font-mono text-[10px] text-slate-500 font-bold">{idx + 9}</span>
+              <div key={idx} className="bg-slate-50 border border-slate-300 p-3 rounded-lg text-sm md:text-base font-bold text-slate-900 flex items-center gap-2.5">
+                <span className="font-mono text-xs text-slate-800 font-black">{idx + 9}</span>
                 <span>{m}</span>
               </div>
             ))}
@@ -74,14 +74,14 @@ export default function Slide12_EcosystemCoverage() {
       </div>
 
       {/* Embedded Tech Banner */}
-      <div className="bg-[#0B131F] text-white p-3 rounded-lg flex items-center justify-between font-mono text-xs">
-        <span className="text-[#C5A059] font-bold">EMBEDDED SMART TECH:</span>
-        <span className="text-slate-300">GPS Fleet Tracking • IoT Smart Campus Access • Native Mobile Apps</span>
-        <span className="text-[#05A872] font-bold">100% MOBILE FIRST</span>
+      <div className="bg-[#0B131F] text-white p-4 rounded-xl flex items-center justify-between font-mono text-xs md:text-sm font-bold border-2 border-slate-800 shadow-md">
+        <span className="text-[#C5A059]">EMBEDDED SMART TECH:</span>
+        <span className="text-slate-100 font-semibold">GPS Fleet Tracking • IoT Smart Campus Access • Native Mobile Apps</span>
+        <span className="text-[#05A872]">100% MOBILE FIRST</span>
       </div>
 
       {/* Footer */}
-      <div className="pt-2 border-t border-slate-300 text-[11px] text-slate-600 font-mono flex justify-between">
+      <div className="pt-2 border-t-2 border-slate-300 text-xs md:text-sm text-slate-800 font-mono font-bold flex justify-between">
         <span>09 · UMS-ERP COVERAGE · SYSTECH × PAKIZA LIMITED</span>
         <span className="text-[#2563EB]">DIGITAL ECOSYSTEM COVERAGE</span>
       </div>

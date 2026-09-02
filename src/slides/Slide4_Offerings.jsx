@@ -13,8 +13,8 @@ export default function Slide4_Offerings() {
         'Ministry & Leadership Dashboards'
       ],
       target: 'UGC & Ministry Leadership',
-      bg: 'bg-[#D32F2F] text-white border-red-400',
-      tagBg: 'bg-[#991B1B] text-white',
+      bg: 'bg-[#D32F2F] text-white border-2 border-red-400',
+      tagBg: 'bg-[#991B1B] text-white font-black',
     },
     {
       num: '02',
@@ -27,8 +27,8 @@ export default function Slide4_Offerings() {
         'GPS Fleet & IoT Smart Access'
       ],
       target: 'Public & Private Universities',
-      bg: 'bg-[#2563EB] text-white border-blue-400',
-      tagBg: 'bg-[#1E40AF] text-white',
+      bg: 'bg-[#2563EB] text-white border-2 border-blue-400',
+      tagBg: 'bg-[#1E40AF] text-white font-black',
     },
     {
       num: '03',
@@ -41,8 +41,8 @@ export default function Slide4_Offerings() {
         'Handover to UMS-ERP Sync'
       ],
       target: '1M+ Seasonal Applicants',
-      bg: 'bg-[#0B131F] text-white border-slate-800',
-      tagBg: 'bg-[#05A872] text-slate-950 font-bold',
+      bg: 'bg-[#0B131F] text-white border-2 border-slate-700',
+      tagBg: 'bg-[#05A872] text-slate-950 font-black',
     },
     {
       num: '04',
@@ -55,8 +55,8 @@ export default function Slide4_Offerings() {
         '24-Hour Query Resolution SLA'
       ],
       target: 'Students, Faculty & Industry',
-      bg: 'bg-[#D9A74A] text-slate-950 border-amber-600',
-      tagBg: 'bg-slate-950 text-[#D9A74A]',
+      bg: 'bg-[#D9A74A] text-slate-950 border-2 border-amber-600',
+      tagBg: 'bg-slate-950 text-[#D9A74A] font-black',
     },
     {
       num: '05',
@@ -69,8 +69,8 @@ export default function Slide4_Offerings() {
         'Output Repository & Audit'
       ],
       target: 'Faculty & Research Scholars',
-      bg: 'bg-[#05A872] text-white border-emerald-400',
-      tagBg: 'bg-[#065F46] text-white',
+      bg: 'bg-[#05A872] text-white border-2 border-emerald-400',
+      tagBg: 'bg-[#065F46] text-white font-black',
     },
   ];
 
@@ -79,8 +79,8 @@ export default function Slide4_Offerings() {
       {/* Top Header */}
       <div>
         <div className="flex items-center gap-2 mb-2">
-          <div className="w-5 h-[2px] bg-[#05A872]"></div>
-          <span className="text-[11px] font-bold tracking-[0.2em] text-[#05A872] uppercase font-sans">
+          <div className="w-6 h-[3px] bg-[#05A872]"></div>
+          <span className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#05A872] uppercase font-sans">
             OUR SOLUTION SUITE
           </span>
         </div>
@@ -89,7 +89,7 @@ export default function Slide4_Offerings() {
           Our Five <span className="text-[#C5A059] font-serif italic font-black">Flagship Offerings</span>
         </h1>
 
-        <p className="font-serif italic text-slate-600 text-base md:text-lg max-w-4xl font-normal">
+        <p className="font-serif italic text-slate-800 text-lg md:text-2xl max-w-4xl font-semibold">
           Digitize the complete lifecycle of higher education administration across all 8 divisions of Bangladesh.
         </p>
       </div>
@@ -99,46 +99,46 @@ export default function Slide4_Offerings() {
         {offerings.map((item) => (
           <div
             key={item.code}
-            className={`${item.bg} p-5 rounded-2xl shadow-xl flex flex-col justify-between border hover-float transition-all duration-300 min-h-[360px]`}
+            className={`${item.bg} p-5 rounded-2xl shadow-xl flex flex-col justify-between hover-float transition-all duration-300 min-h-[380px]`}
           >
             <div>
               <div className="flex items-center justify-between mb-3">
-                <span className="font-serif text-3xl font-black opacity-90">
+                <span className="font-serif text-4xl font-black opacity-95">
                   {item.num}
                 </span>
-                <span className={`font-mono text-[9px] font-bold tracking-widest px-2 py-0.5 rounded uppercase ${item.tagBg}`}>
+                <span className={`font-mono text-xs md:text-sm font-black tracking-widest px-2.5 py-1 rounded uppercase ${item.tagBg}`}>
                   {item.code}
                 </span>
               </div>
 
-              <h3 className="font-serif font-black text-xl mb-1 leading-tight">
+              <h3 className="font-serif font-black text-2xl md:text-3xl mb-1 leading-tight">
                 {item.title}
               </h3>
-              <p className="text-[10px] font-mono font-bold tracking-wider opacity-80 uppercase mb-4">
+              <p className="text-xs md:text-sm font-mono font-black tracking-wider opacity-90 uppercase mb-4">
                 {item.scope}
               </p>
 
               {/* Bullet Features */}
-              <div className="space-y-2 pt-2 border-t border-current/20 font-sans text-xs">
+              <div className="space-y-2 pt-3 border-t border-current/40 font-sans text-sm md:text-base font-bold">
                 {item.features.map((feat, idx) => (
                   <div key={idx} className="flex items-start gap-2">
-                    <span className="font-bold">✓</span>
-                    <span className="opacity-90 leading-tight font-light">{feat}</span>
+                    <span className="font-bold text-lg leading-none">✓</span>
+                    <span className="opacity-95 leading-tight">{feat}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Target Audience Footer Pill */}
-            <div className="pt-3 border-t border-current/20 font-mono text-[9px] uppercase tracking-wider opacity-80">
-              TARGET: <strong className="font-bold">{item.target}</strong>
+            <div className="pt-3 border-t border-current/40 font-mono text-xs md:text-sm uppercase tracking-wider opacity-95 font-black">
+              TARGET: <strong className="font-black">{item.target}</strong>
             </div>
           </div>
         ))}
       </div>
 
       {/* Footer */}
-      <div className="border-t border-slate-300 pt-3 flex justify-between font-mono text-[11px] text-slate-600">
+      <div className="border-t-2 border-slate-300 pt-3 flex justify-between font-mono text-xs md:text-sm font-bold text-slate-800">
         <span>04 · OUR SOLUTION SUITE · SYSTECH × PAKIZA LIMITED</span>
         <span className="text-[#05A872]">FIVE FLAGSHIP PLATFORMS</span>
       </div>

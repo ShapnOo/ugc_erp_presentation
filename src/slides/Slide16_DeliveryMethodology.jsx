@@ -7,35 +7,35 @@ export default function Slide16_DeliveryMethodology() {
       title: 'Discovery',
       desc: 'Stakeholder interviews, workflow analysis, requirements engineering. We map your world before one line of code.',
       timeline: '↑ WEEKS 1–8',
-      bgClass: 'bg-[#0B131F] text-white'
+      bgClass: 'bg-[#0B131F] text-white border-2 border-slate-700'
     },
     {
       num: 'Phase 02',
       title: 'Design',
       desc: 'Architecture, service blueprint, UI/UX mockups, sign-off at every gate. We build the right thing.',
       timeline: '↑ MONTHS 2–4',
-      bgClass: 'bg-[#047857] text-white'
+      bgClass: 'bg-[#047857] text-white border-2 border-emerald-400'
     },
     {
       num: 'Phase 03',
       title: 'Build & Iterate',
       desc: 'Two-week sprint cadence with continuous delivery, automated testing, and stakeholder-visible demos.',
       timeline: '↑ CORE PHASE — LARGEST INVESTMENT',
-      bgClass: 'bg-[#2563EB] text-white transform -translate-y-3 shadow-2xl ring-2 ring-blue-400'
+      bgClass: 'bg-[#2563EB] text-white transform -translate-y-3 shadow-2xl border-2 border-blue-300 ring-4 ring-blue-400/30'
     },
     {
       num: 'Phase 04',
       title: 'Deploy & Pilot',
       desc: 'Phased go-live across anchor universities, training, on-ground user enablement, and live support.',
       timeline: '↑ ROLL-OUT',
-      bgClass: 'bg-[#C5A059] text-slate-950 font-semibold'
+      bgClass: 'bg-[#C5A059] text-slate-950 font-bold border-2 border-amber-500'
     },
     {
       num: 'Phase 05',
       title: 'Operate & Evolve',
       desc: 'Multi-year support, performance monitoring, feature evolution, and change adoption.',
       timeline: '↑ LONG-TERM COMMITMENT',
-      bgClass: 'bg-[#D32F2F] text-white'
+      bgClass: 'bg-[#D32F2F] text-white border-2 border-red-400'
     }
   ];
 
@@ -44,8 +44,8 @@ export default function Slide16_DeliveryMethodology() {
       {/* Top Header */}
       <div>
         <div className="flex items-center gap-2 mb-3">
-          <div className="w-5 h-[2px] bg-[#05A872]"></div>
-          <span className="text-[11px] font-bold tracking-[0.2em] text-[#05A872] uppercase font-sans">
+          <div className="w-6 h-[3px] bg-[#05A872]"></div>
+          <span className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#05A872] uppercase font-sans">
             OUR DELIVERY METHODOLOGY
           </span>
         </div>
@@ -54,14 +54,14 @@ export default function Slide16_DeliveryMethodology() {
           How We <span className="text-[#05A872] font-serif italic font-black">Deliver.</span>
         </h1>
 
-        <p className="font-serif italic text-slate-600 text-base md:text-lg max-w-4xl font-normal">
+        <p className="font-serif italic text-slate-700 text-lg md:text-2xl max-w-4xl font-medium">
           A proven phased methodology engineered for enterprise-scale national programmes — disciplined, transparent, outcome-led.
         </p>
       </div>
 
       {/* 5 Phase Cards Grid */}
       <div className="my-auto">
-        <p className="text-[10px] font-bold tracking-[0.25em] text-[#C5A059] uppercase font-sans mb-3">
+        <p className="text-xs md:text-sm font-mono font-bold tracking-[0.2em] text-[#C5A059] uppercase font-sans mb-3">
           FIVE PHASES OF OUR DELIVERY
         </p>
 
@@ -69,21 +69,21 @@ export default function Slide16_DeliveryMethodology() {
           {phases.map((p) => (
             <div
               key={p.num}
-              className={`${p.bgClass} p-5 rounded-xl shadow-xl flex flex-col justify-between min-h-[300px] transition-all duration-300`}
+              className={`${p.bgClass} p-5 rounded-2xl shadow-xl flex flex-col justify-between min-h-[320px] transition-all duration-300 hover-float`}
             >
               <div>
-                <span className="font-serif text-lg font-bold block mb-1 opacity-90">
+                <span className="font-serif text-xl font-black block mb-1 opacity-95">
                   {p.num}
                 </span>
-                <h3 className="font-serif font-black text-2xl mb-3 leading-tight">
+                <h3 className="font-serif font-black text-2xl md:text-3xl mb-3 leading-tight">
                   {p.title}
                 </h3>
-                <p className="text-xs opacity-90 leading-relaxed font-sans font-light">
+                <p className="text-sm md:text-base opacity-95 leading-relaxed font-sans font-semibold">
                   {p.desc}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-current/20 font-mono text-[9px] font-bold tracking-widest uppercase opacity-80">
+              <div className="pt-4 border-t border-current/30 font-mono text-xs font-bold tracking-widest uppercase opacity-95">
                 {p.timeline}
               </div>
             </div>
@@ -92,9 +92,9 @@ export default function Slide16_DeliveryMethodology() {
       </div>
 
       {/* Bottom Stance */}
-      <div className="pt-3 border-t border-slate-300 flex justify-between font-mono text-[11px] text-slate-600">
-        <span className="font-serif italic text-slate-900">
-          Our stance: <strong className="font-semibold text-[#05A872]">enterprise programmes reward discipline</strong> — we build that in from day one.
+      <div className="pt-3 border-t-2 border-slate-300 flex justify-between font-mono text-xs md:text-sm text-slate-800 font-bold">
+        <span className="font-serif italic text-slate-950 font-bold text-base md:text-lg">
+          Our stance: <strong className="font-black text-[#05A872]">enterprise programmes reward discipline</strong> — we build that in from day one.
         </span>
         <span>16 · OUR METHODOLOGY · SYSTECH × PAKIZA LIMITED</span>
       </div>

@@ -37,8 +37,8 @@ export default function Slide23_ExecutiveSummary() {
       {/* Top Header */}
       <div>
         <div className="flex items-center gap-2 mb-3">
-          <div className="w-5 h-[2px] bg-[#C5A059]"></div>
-          <span className="text-[11px] font-bold tracking-[0.2em] text-[#C5A059] uppercase font-sans">
+          <div className="w-6 h-[3px] bg-[#C5A059]"></div>
+          <span className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#C5A059] uppercase font-sans">
             EXECUTIVE SUMMARY & VALUE PROPOSITION
           </span>
         </div>
@@ -47,27 +47,27 @@ export default function Slide23_ExecutiveSummary() {
           Why Award to <span className="text-[#C5A059] font-serif italic font-black">Systech × Pakiza</span>
         </h1>
 
-        <p className="font-serif italic text-slate-600 text-base md:text-lg max-w-4xl font-normal">
+        <p className="font-serif italic text-slate-700 text-lg md:text-2xl max-w-4xl font-medium">
           The right partner to transform Bangladesh higher education governance — experienced, local, disciplined, and outcome-led.
         </p>
       </div>
 
       {/* 4 Summary Cards Grid */}
       <div className="my-auto">
-        <p className="text-[10px] font-bold tracking-[0.25em] text-[#C5A059] uppercase font-sans mb-3">
+        <p className="text-xs md:text-sm font-mono font-bold tracking-[0.2em] text-[#C5A059] uppercase font-sans mb-3">
           FOUR REASONS OUR CONSORTIUM IS TURNKEY READY
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {summaryCards.map((c) => (
-            <div key={c.num} className={`bg-white border-l-4 ${c.border} border-t border-r border-b border-slate-200 p-6 rounded-r-xl shadow-md space-y-2`}>
+            <div key={c.num} className={`bg-white border-l-4 ${c.border} border-t-2 border-r-2 border-b-2 border-slate-300 p-6 rounded-r-xl shadow-md space-y-2 hover-float`}>
               <div className="flex items-baseline gap-3">
-                <span className={`font-serif text-3xl font-black ${c.color}`}>{c.num}</span>
-                <h3 className="font-serif font-black text-xl text-slate-900 leading-tight">
+                <span className={`font-serif text-4xl font-black ${c.color}`}>{c.num}</span>
+                <h3 className="font-serif font-black text-xl md:text-2xl text-slate-900 leading-tight">
                   {c.title}
                 </h3>
               </div>
-              <p className="text-xs text-slate-600 leading-relaxed font-sans font-light">
+              <p className="text-sm md:text-base text-slate-800 leading-relaxed font-sans font-bold">
                 {c.desc}
               </p>
             </div>
@@ -76,12 +76,12 @@ export default function Slide23_ExecutiveSummary() {
       </div>
 
       {/* Bottom Closing Stance */}
-      <div className="bg-[#0B131F] text-white p-3 rounded-lg text-center font-serif text-xs italic font-bold">
+      <div className="bg-[#0B131F] text-white p-4 rounded-xl text-center font-serif text-base md:text-lg italic font-bold border-2 border-slate-800 shadow-md">
         "Systech × Pakiza — the partner who stays until your national transformation is fully achieved."
       </div>
 
       {/* Footer */}
-      <div className="pt-2 border-t border-slate-300 text-[11px] text-slate-600 font-mono flex justify-between">
+      <div className="pt-2 border-t-2 border-slate-300 text-xs md:text-sm text-slate-800 font-mono font-bold flex justify-between">
         <span>22 · EXECUTIVE SUMMARY · SYSTECH × PAKIZA LIMITED</span>
         <span className="text-[#C5A059]">VALUE PROPOSITION</span>
       </div>

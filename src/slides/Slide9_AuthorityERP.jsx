@@ -26,44 +26,41 @@ export default function Slide9_AuthorityERP() {
       {/* Top Header */}
       <div className="relative z-10">
         <div className="flex items-center gap-2 mb-3">
-          <div className="w-5 h-[2px] bg-[#D32F2F]"></div>
-          <span className="text-xs font-bold tracking-[0.2em] text-[#D32F2F] uppercase font-sans">
+          <div className="w-6 h-[3px] bg-[#D32F2F]"></div>
+          <span className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#D32F2F] uppercase font-sans">
             OUR OFFERING 01 OF 05
           </span>
         </div>
 
-        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-tight mb-2">
+        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 leading-tight mb-2">
           Central Authority Automation <span className="text-[#D32F2F] font-serif italic font-black">Platform</span>
         </h1>
 
-        <p className="font-serif italic text-slate-600 text-base md:text-xl max-w-4xl font-normal">
+        <p className="font-serif italic text-slate-700 text-lg md:text-2xl max-w-4xl font-medium">
           UGC ERP: 11 modular microservices digitizing central authority operations, financial governance, university oversight, and ministry KPI reporting.
         </p>
       </div>
 
       {/* Grid: 11 Modules Display */}
-      <div className="relative z-10 my-auto space-y-3">
+      <div className="relative z-10 my-auto space-y-3 font-sans">
         <div className="flex items-center justify-between">
-          <p className="text-xs font-bold tracking-[0.25em] text-[#C5A059] uppercase font-sans">
+          <p className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#C5A059] uppercase font-sans">
             11 FUNCTIONAL GOVERNANCE MODULES (INDEPENDENT MICROSERVICES)
           </p>
-          <span className="text-xs font-mono text-emerald-800 font-bold bg-emerald-100 px-2.5 py-1 rounded border border-emerald-300">
-            ● Microservice Architecture
-          </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 font-sans">
           {/* Column 1 */}
           <div className="space-y-3">
             {modulesCol1.map((m) => (
-              <div key={m.code} className="bg-white/95 border border-slate-300 p-3 rounded-xl flex items-center justify-between shadow-xs hover-float">
-                <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs md:text-sm font-bold text-[#D32F2F] bg-red-100 px-3 py-1 rounded-md border border-red-200">
+              <div key={m.code} className="bg-white border-2 border-slate-300 p-3.5 rounded-xl flex items-center justify-between shadow-xs hover-float font-sans">
+                <div className="flex items-center gap-3 font-sans">
+                  <span className="text-xs md:text-sm font-bold text-[#D32F2F] bg-red-100 px-3 py-1 rounded-md border border-red-300 shrink-0 font-sans">
                     {m.code}
                   </span>
-                  <div>
-                    <h4 className="text-sm font-bold text-slate-900 font-sans">{m.name}</h4>
-                    <p className="text-xs text-slate-600 font-medium">{m.desc}</p>
+                  <div className="font-sans">
+                    <h4 className="text-base md:text-lg font-bold text-slate-900 font-sans">{m.name}</h4>
+                    <p className="text-xs md:text-sm text-slate-700 font-semibold font-sans">{m.desc}</p>
                   </div>
                 </div>
               </div>
@@ -73,14 +70,14 @@ export default function Slide9_AuthorityERP() {
           {/* Column 2 */}
           <div className="space-y-3">
             {modulesCol2.map((m) => (
-              <div key={m.code} className="bg-white/95 border border-slate-300 p-3 rounded-xl flex items-center justify-between shadow-xs hover-float">
-                <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs md:text-sm font-bold text-[#D32F2F] bg-red-100 px-3 py-1 rounded-md border border-red-200">
+              <div key={m.code} className="bg-white border-2 border-slate-300 p-3.5 rounded-xl flex items-center justify-between shadow-xs hover-float font-sans">
+                <div className="flex items-center gap-3 font-sans">
+                  <span className="text-xs md:text-sm font-bold text-[#D32F2F] bg-red-100 px-3 py-1 rounded-md border border-red-300 shrink-0 font-sans">
                     {m.code}
                   </span>
-                  <div>
-                    <h4 className="text-sm font-bold text-slate-900 font-sans">{m.name}</h4>
-                    <p className="text-xs text-slate-600 font-medium">{m.desc}</p>
+                  <div className="font-sans">
+                    <h4 className="text-base md:text-lg font-bold text-slate-900 font-sans">{m.name}</h4>
+                    <p className="text-xs md:text-sm text-slate-700 font-semibold font-sans">{m.desc}</p>
                   </div>
                 </div>
               </div>
@@ -90,12 +87,12 @@ export default function Slide9_AuthorityERP() {
       </div>
 
       {/* Bottom Callout */}
-      <div className="relative z-10 bg-white border-l-4 border-[#D32F2F] border-t border-r border-b border-slate-200 p-3.5 rounded-r-xl shadow-xs text-center font-serif text-xs md:text-sm italic text-slate-900 font-bold">
+      <div className="relative z-10 bg-white border-l-4 border-[#D32F2F] border-t-2 border-r-2 border-b-2 border-slate-300 p-4 rounded-r-xl shadow-xs text-center font-serif text-base md:text-lg italic text-slate-950 font-bold">
         "The ERP that becomes the government's window onto its entire higher-education sector."
       </div>
 
       {/* Footer */}
-      <div className="relative z-10 border-t border-slate-300 pt-2 flex justify-between font-mono text-xs font-bold text-slate-700">
+      <div className="relative z-10 border-t-2 border-slate-300 pt-2 flex justify-between text-xs md:text-sm font-bold text-slate-800 font-sans">
         <span>06 · UGC ERP · SYSTECH × PAKIZA LIMITED</span>
         <span className="text-[#D32F2F]">CENTRAL GOVERNANCE AUTOMATION</span>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function Slide17_DeliveryTeam() {
-  const pillars = [
+  const teamPillars = [
     {
       code: 'PILLAR 01',
       title: 'Programme Leadership',
@@ -10,8 +10,8 @@ export default function Slide17_DeliveryTeam() {
       color: 'border-[#C5A059] bg-white',
       textColor: 'text-[#C5A059]',
       subRoles: [
-        { name: 'Programme Managers', count: '100% Dedicated' },
-        { name: 'Client Liaison & Governance', count: 'UGC Liaison' }
+        { name: 'Programme Managers', count: '48 MM (3 PMs)' },
+        { name: 'Business Analysts', count: '12 MM (3 BAs)' }
       ]
     },
     {
@@ -22,8 +22,8 @@ export default function Slide17_DeliveryTeam() {
       color: 'border-[#05A872] bg-white',
       textColor: 'text-[#05A872]',
       subRoles: [
-        { name: 'BdREN SSO Architects', count: 'Identity Lead' },
-        { name: 'Security & Audit Officers', count: 'Compliance' }
+        { name: 'System Architects / Leads', count: '89 MM (7 Leads)' },
+        { name: 'UI/UX Designers', count: '136 MM (7 Designers)' }
       ]
     },
     {
@@ -34,8 +34,8 @@ export default function Slide17_DeliveryTeam() {
       color: 'border-blue-500 bg-white',
       textColor: 'text-[#2563EB]',
       subRoles: [
-        { name: 'Frontend React Engineers', count: 'Web UI Team' },
-        { name: 'Backend Microservices Team', count: 'API Team' }
+        { name: 'Frontend React Engineers', count: '828 MM (41 Devs)' },
+        { name: 'Backend Microservices Team', count: '603 MM (54 Devs)' }
       ]
     },
     {
@@ -46,8 +46,8 @@ export default function Slide17_DeliveryTeam() {
       color: 'border-red-500 bg-white',
       textColor: 'text-[#D32F2F]',
       subRoles: [
-        { name: 'SQA Automation Squad', count: 'Test Squad' },
-        { name: 'DevOps & SRE Engineers', count: 'Infra SRE' }
+        { name: 'SQA Testing Squad', count: '158 MM (10 SQA)' },
+        { name: 'DevOps & SRE Engineers', count: '34 MM (4 SRE)' }
       ]
     }
   ];
@@ -59,23 +59,34 @@ export default function Slide17_DeliveryTeam() {
 
       {/* Top Header */}
       <div className="relative z-10">
-        <div className="flex items-center gap-2 mb-2">
-          <div className="w-5 h-[2px] bg-[#05A872]"></div>
-          <span className="text-xs font-bold tracking-[0.2em] text-[#05A872] uppercase font-sans">
-            OUR DELIVERY TEAM
-          </span>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-[3px] bg-[#05A872]"></div>
+            <span className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#05A872] uppercase font-sans">
+              OUR DELIVERY TEAM
+            </span>
+          </div>
+
+          <div className="flex items-center gap-2 font-sans font-bold">
+            <span className="text-xs md:text-sm text-slate-950 bg-[#C5A059]/30 border border-[#C5A059] px-3.5 py-1 rounded-md shadow-sm">
+              1,908 MAN-MONTHS EFFORT
+            </span>
+            <span className="text-xs md:text-sm text-white bg-[#0B131F] border border-slate-800 px-3.5 py-1 rounded-md shadow-sm">
+              92 DEDICATED FTEs (133 PEAK HEADCOUNT)
+            </span>
+          </div>
         </div>
 
-        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 leading-tight mb-2">
+        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 leading-tight mb-2 mt-1">
           Multi-Disciplinary <span className="text-[#05A872] font-serif italic font-black">Enterprise Delivery</span>
         </h1>
 
-        <p className="font-serif italic text-slate-600 text-base md:text-xl max-w-4xl font-normal">
-          Our Systech × Pakiza consortium assembles a dedicated programme organisation with the disciplines and depth an enterprise-scale transformation demands.
+        <p className="font-serif italic text-slate-700 text-lg md:text-2xl max-w-4xl font-medium">
+          Our Systech × Pakiza consortium commits 92 dedicated full-time equivalent resources across 1,908 man-months of software engineering effort.
         </p>
       </div>
 
-      {/* Interactive Animated Hierarchy Flow Stage */}
+      {/* Interactive Hierarchy Flow Stage */}
       <div className="relative z-10 my-auto flex flex-col items-center justify-between min-h-[380px] w-full">
         
         {/* Animated SVG Rays connecting Top Steering Node down to 4 Pillar Hubs */}
@@ -87,37 +98,34 @@ export default function Slide17_DeliveryTeam() {
         </svg>
 
         {/* TOP LEVEL NODE: Consortium Steering Committee */}
-        <div className="relative z-10 bg-[#0B131F] text-white px-10 py-3.5 rounded-2xl shadow-2xl border-2 border-[#C5A059] text-center hub-pulse-ring hover-float cursor-pointer w-full max-w-xl">
-          <div className="flex items-center justify-center gap-2 mb-0.5">
-            <span className="w-2 h-2 rounded-full bg-[#C5A059] animate-pulse"></span>
-            <h3 className="font-serif font-black text-xl text-white">SYSTECH × PAKIZA PROGRAMME STEERING COMMITTEE</h3>
-          </div>
-          <p className="text-[10px] font-mono font-bold tracking-[0.2em] text-[#C5A059] uppercase">
-            EXECUTIVE OVERSIGHT & JOINT VENTURE GOVERNANCE
+        <div className="relative z-10 bg-[#0B131F] text-white px-10 py-3.5 rounded-2xl shadow-2xl border-2 border-[#C5A059] text-center hub-pulse-ring hover-float cursor-pointer w-full max-w-2xl">
+          <h3 className="font-serif font-black text-xl md:text-2xl text-white">SYSTECH × PAKIZA PROGRAMME STEERING COMMITTEE</h3>
+          <p className="text-xs font-bold tracking-[0.2em] text-[#C5A059] uppercase font-sans mt-0.5">
+            EXECUTIVE OVERSIGHT · 1,908 MAN-MONTHS SOFTWARE EFFORT
           </p>
         </div>
 
         {/* 4 PILLAR HUBS ROW */}
-        <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
-          {pillars.map((p, idx) => (
+        <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-4 gap-4 mt-6 font-sans">
+          {teamPillars.map((p, idx) => (
             <div key={idx} className={`border-2 ${p.color} p-4 rounded-2xl shadow-lg flex flex-col justify-between hover-float`}>
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded ${p.badge} uppercase tracking-wider`}>
+                  <span className={`text-xs font-bold px-2.5 py-0.5 rounded ${p.badge} uppercase tracking-wider`}>
                     {p.code}
                   </span>
-                  <span className="text-[9px] font-mono font-bold text-slate-400">DEDICATED</span>
+                  <span className="text-xs font-bold text-slate-700">100% DEDICATED</span>
                 </div>
-                <h4 className="font-serif font-black text-base text-slate-900 leading-tight mb-1">{p.title}</h4>
-                <p className="text-xs text-slate-500 font-mono font-bold mb-3">{p.lead}</p>
+                <h4 className="font-serif font-black text-lg md:text-xl text-slate-900 leading-tight mb-1">{p.title}</h4>
+                <p className="text-xs md:text-sm text-slate-700 font-bold mb-3">{p.lead}</p>
               </div>
 
               {/* Sub-roles Cards */}
-              <div className="space-y-2 pt-2 border-t border-slate-200 font-sans">
+              <div className="space-y-2 pt-2 border-t-2 border-slate-200 font-sans">
                 {p.subRoles.map((sr, srIdx) => (
-                  <div key={srIdx} className="bg-slate-50 border border-slate-200 p-2 rounded-lg flex items-center justify-between">
-                    <span className="text-xs font-bold text-slate-800">{sr.name}</span>
-                    <span className={`text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-white border ${p.textColor}`}>
+                  <div key={srIdx} className="bg-slate-50 border border-slate-300 p-2.5 rounded-lg flex items-center justify-between">
+                    <span className="text-xs md:text-sm font-bold text-slate-900">{sr.name}</span>
+                    <span className={`text-xs font-bold px-2 py-0.5 rounded bg-white border ${p.textColor}`}>
                       {sr.count}
                     </span>
                   </div>
@@ -130,14 +138,14 @@ export default function Slide17_DeliveryTeam() {
       </div>
 
       {/* Bottom Executive Commitment Bar */}
-      <div className="relative z-10 bg-white border-l-4 border-[#05A872] border-t border-r border-b border-slate-300 p-3.5 rounded-r-xl shadow-xs text-center font-serif text-xs md:text-sm italic text-slate-900 font-black">
-        "Our commitment: a fully-staffed team dedicated to your programme — not a shared bench."
+      <div className="relative z-10 bg-white border-l-4 border-[#05A872] border-t-2 border-r-2 border-b-2 border-slate-300 p-4 rounded-r-xl shadow-xs text-center font-serif text-base md:text-lg italic text-slate-950 font-black">
+        "Our commitment: 92 dedicated full-time equivalent resources across 1,908 man-months — not a shared bench."
       </div>
 
       {/* Footer */}
-      <div className="relative z-10 border-t border-slate-300 pt-2 flex justify-between font-mono text-xs font-bold text-slate-700">
+      <div className="relative z-10 border-t-2 border-slate-300 pt-2 flex justify-between font-sans text-xs md:text-sm font-bold text-slate-800">
         <span>18 · OUR TEAM · SYSTECH × PAKIZA LIMITED</span>
-        <span className="text-[#05A872]">MULTI-DISCIPLINARY DELIVERY TEAM</span>
+        <span className="text-[#05A872]">MULTI-DISCIPLINARY DELIVERY TEAM (1,908 MAN-MONTHS)</span>
       </div>
     </div>
   );
