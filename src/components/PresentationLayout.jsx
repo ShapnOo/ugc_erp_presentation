@@ -15,7 +15,9 @@ import {
   Search,
   Share2,
   Check,
-  Lock
+  Lock,
+  Maximize,
+  Minimize
 } from 'lucide-react';
 
 import SlideOverviewModal from './SlideOverviewModal';
@@ -37,6 +39,7 @@ export default function PresentationLayout() {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
   const [searchQuery, setSearchQuery] = useState('');
   const [showCopyToast, setShowCopyToast] = useState(false);
+  const [isFullscreenActive, setIsFullscreenActive] = useState(!!document.fullscreenElement);
 
   const totalSlides = SLIDES_CONFIG.length;
   const currentSlide = SLIDES_CONFIG[currentSlideIndex];
@@ -125,6 +128,15 @@ export default function PresentationLayout() {
     }
   };
 
+  // Toggle fullscreen for Audience View
+  const toggleAudienceFullscreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => {});
+    } else {
+      document.exitFullscreen().catch(() => {});
+    }
+  };
+
   // Dual Monitor Presenter View Trigger
   const openPresenterView = () => {
     const presenterWin = window.open(
@@ -159,7 +171,9 @@ export default function PresentationLayout() {
 
   useEffect(() => {
     const handleFullscreenChange = () => {
-      if (!document.fullscreenElement && isPresentationMode && !isViewOnlyWindow) {
+      const active = !!document.fullscreenElement;
+      setIsFullscreenActive(active);
+      if (!active && isPresentationMode && !isViewOnlyWindow) {
         setIsPresentationMode(false);
       }
     };
@@ -187,7 +201,10 @@ export default function PresentationLayout() {
         case 'f':
         case 'F':
         case 'F5':
-          if (!isViewOnlyWindow) {
+          if (isViewOnlyWindow) {
+            e.preventDefault();
+            toggleAudienceFullscreen();
+          } else {
             e.preventDefault();
             if (isPresentationMode) {
               exitPresentation();
@@ -246,16 +263,16 @@ export default function PresentationLayout() {
   if (isViewOnlyWindow) {
     return (
       <div className="relative w-screen h-screen bg-slate-950 text-slate-100 flex flex-col justify-between overflow-hidden select-none cursor-default font-sans">
-        {/* Top Progress Bar */}
-        <div className="w-full bg-slate-900/40 h-1 z-50">
+        {/* Top Progress Bar (Hides in Fullscreen) */}
+        <div className={`w-full bg-slate-900/40 h-1 z-50 transition-opacity duration-300 ${isFullscreenActive ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
           <div
             className="bg-gradient-to-r from-[#05A872] via-[#C5A059] to-[#2563EB] h-full transition-all duration-300"
             style={{ width: `${((currentSlideIndex + 1) / totalSlides) * 100}%` }}
           ></div>
         </div>
 
-        {/* View-Only Protected Badge Header */}
-        <div className="absolute top-3 right-5 z-50 flex items-center gap-2 bg-slate-900/90 border border-slate-800/90 px-3.5 py-1.5 rounded-full backdrop-blur-md shadow-lg text-xs font-mono">
+        {/* View-Only Protected Badge Header (Hides in Fullscreen) */}
+        <div className={`absolute top-3 right-5 z-50 flex items-center gap-2 bg-slate-900/90 border border-slate-800/90 px-3.5 py-1.5 rounded-full backdrop-blur-md shadow-lg text-xs font-mono transition-opacity duration-300 ${isFullscreenActive ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
           <Lock className="w-3.5 h-3.5 text-[#C5A059]" />
           <span className="text-slate-300 font-medium">AUDIENCE VIEW</span>
           <span className="w-1.5 h-1.5 rounded-full bg-[#05A872] animate-pulse"></span>
@@ -277,29 +294,58 @@ export default function PresentationLayout() {
           </div>
         </div>
 
-        {/* Audience Navigation Controls Bar */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-50 bg-slate-900/90 border border-slate-800 rounded-full px-4 py-2 flex items-center gap-4 shadow-2xl backdrop-blur-md">
-          <button
-            onClick={goToPrevSlide}
-            disabled={currentSlideIndex === 0}
-            className="p-1.5 rounded-full hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed text-slate-200 transition-all cursor-pointer"
-            title="Previous Slide (Left Arrow)"
+        {/* Bottom Hover Trigger Container — Bar is 100% INVISIBLE in Fullscreen until mouse hovers bottom edge */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 z-50 flex items-center justify-center group/controls pointer-events-auto">
+          <div
+            className={`bg-slate-900/95 border border-slate-800 rounded-full px-4 py-2 flex items-center gap-4 shadow-2xl backdrop-blur-md transition-all duration-300 ${
+              isFullscreenActive
+                ? 'opacity-0 group-hover/controls:opacity-100 pointer-events-none group-hover/controls:pointer-events-auto translate-y-3 group-hover/controls:translate-y-0'
+                : 'opacity-100 translate-y-0'
+            }`}
           >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
+            <button
+              onClick={goToPrevSlide}
+              disabled={currentSlideIndex === 0}
+              className="p-1.5 rounded-full hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed text-slate-200 transition-all cursor-pointer"
+              title="Previous Slide (Left Arrow)"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
 
-          <span className="font-mono text-xs text-slate-300">
-            <strong className="text-[#05A872]">{currentSlideIndex + 1}</strong> / {totalSlides}
-          </span>
+            <span className="font-mono text-xs text-slate-300">
+              <strong className="text-[#05A872]">{currentSlideIndex + 1}</strong> / {totalSlides}
+            </span>
 
-          <button
-            onClick={goToNextSlide}
-            disabled={currentSlideIndex === totalSlides - 1}
-            className="p-1.5 rounded-full hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed text-slate-200 transition-all cursor-pointer"
-            title="Next Slide (Right Arrow)"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
+            <button
+              onClick={goToNextSlide}
+              disabled={currentSlideIndex === totalSlides - 1}
+              className="p-1.5 rounded-full hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed text-slate-200 transition-all cursor-pointer"
+              title="Next Slide (Right Arrow)"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+
+            <div className="w-[1px] h-4 bg-slate-800"></div>
+
+            {/* Audience Full Screen Toggle Button */}
+            <button
+              onClick={toggleAudienceFullscreen}
+              className="p-1.5 rounded-full hover:bg-slate-800 text-emerald-400 border border-emerald-800/80 transition-all cursor-pointer flex items-center gap-1.5 px-3 text-xs font-mono font-bold"
+              title="Toggle Full Screen Presentation Mode (F / F11)"
+            >
+              {isFullscreenActive ? (
+                <>
+                  <Minimize className="w-4 h-4" />
+                  <span className="hidden sm:inline">Exit Fullscreen</span>
+                </>
+              ) : (
+                <>
+                  <Maximize className="w-4 h-4" />
+                  <span className="hidden sm:inline">Full Screen</span>
+                </>
+              )}
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -360,7 +406,7 @@ export default function PresentationLayout() {
                 <Monitor className="w-5 h-5" />
               </div>
               <div>
-                <h1 className="font-serif font-bold text-sm text-slate-100 flex items-center gap-2">
+                <h1 className="font-serif font-bold text-sm text-[#F3F4F6] flex items-center gap-2">
                   Higher Education Digital Suite — Proposal.pptx
                   <span className="text-[10px] font-sans font-normal px-2 py-0.5 bg-slate-800 text-[#05A872] rounded-full border border-slate-700">
                     Saved
@@ -479,7 +525,7 @@ export default function PresentationLayout() {
                   ))}
                 </div>
 
-                <div className="text-[10px] font-mono text-slate-400 font-bold uppercase tracking-wider">
+                <div className="text-[10px] font-mono text-[#C5A059] font-bold uppercase tracking-wider">
                   SLIDES DECK ({filteredSlides.length})
                 </div>
 
@@ -558,8 +604,8 @@ export default function PresentationLayout() {
                 <ChevronLeft className="w-5 h-5" />
               </button>
 
-              <span className="font-mono text-xs text-slate-300">
-                <strong className="text-[#05A872]">{currentSlideIndex + 1}</strong> / {totalSlides}
+              <span className="font-mono text-xs text-[#05A872] font-bold">
+                {currentSlideIndex + 1} / {totalSlides}
               </span>
 
               <button
