@@ -2,12 +2,12 @@ import React from 'react';
 
 export default function Slide2_Overview() {
   const coveragePillars = [
-    { title: 'Authority Governance & Operations' },
-    { title: 'University Administration' },
-    { title: 'Student Admission Lifecycle' },
+    { title: 'UGC Governance & Operations' },
+    { title: 'University Management & Admin' },
+    { title: 'Student Admission & Lifecycle' },
     { title: 'Research Grant Management' },
-    { title: 'Industry & Academia Bridge' },
-    { title: 'Internship & Project Hub' },
+    { title: 'Industry & Job Matching' },
+    { title: 'Internship & Research Hub' },
   ];
 
   return (
@@ -28,26 +28,26 @@ export default function Slide2_Overview() {
             <span className="text-[#05A872] font-serif italic font-black">
               Fully Integrated
             </span>{' '}
-            Digital Higher-Ed Suite.
+            Higher-Ed Digital Suite.
           </h1>
 
           <p className="text-slate-300 text-sm md:text-base leading-relaxed max-w-3xl font-light">
             Our consortium proposes a{' '}
             <strong className="text-white font-semibold">
-              comprehensive five-platform digital transformation programme
+              complete five-platform digital transformation solution
             </strong>{' '}
-            for the higher-education ecosystem — replacing isolated software with a{' '}
+            for Bangladesh higher education — replacing disconnected software with a{' '}
             <strong className="text-[#C5A059] font-semibold">
-              single integrated national platform
+              single unified national system
             </strong>{' '}
-            spanning governance, universities, students, research, and industry.
+            connecting UGC, universities, students, research, and industry.
           </p>
         </div>
 
         {/* Middle: 6 Coverage Cards */}
         <div className="my-4">
           <p className="text-[10px] font-bold tracking-[0.25em] text-[#C5A059] uppercase font-sans mb-3">
-            WHAT OUR SUITE COVERS
+            WHAT OUR SOLUTION COVERS
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {coveragePillars.map((pillar, idx) => (
@@ -66,10 +66,10 @@ export default function Slide2_Overview() {
         {/* Bottom Quote Box */}
         <div className="bg-[#061222] border-l-4 border-[#C5A059] p-4 rounded-r-lg shadow-inner">
           <p className="font-serif italic text-slate-200 text-base md:text-lg font-normal">
-            "We build an integrated national digital ecosystem — not isolated software platforms."
+            "We build one connected digital ecosystem — not isolated software tools."
           </p>
           <p className="text-[10px] font-bold tracking-[0.2em] text-[#05A872] uppercase font-sans mt-1">
-            — OUR DESIGN PHILOSOPHY
+            — OUR GUIDING PRINCIPLE
           </p>
         </div>
 
@@ -84,7 +84,7 @@ export default function Slide2_Overview() {
         {/* Scope Header & Big Stat */}
         <div className="space-y-6">
           <p className="text-[11px] font-bold tracking-[0.25em] text-[#9A7432] uppercase font-sans">
-            OUR OFFERING SCOPE
+            OUR OFFERING AT A GLANCE
           </p>
 
           <div>
@@ -95,7 +95,7 @@ export default function Slide2_Overview() {
               Flagship Platforms.<br /> Built as one system.
             </h2>
             <p className="font-serif italic text-[#05A872] text-sm md:text-base mt-2">
-              Designed, developed and integrated by a single delivery team.
+              Designed, built, and supported by a single dedicated team.
             </p>
           </div>
 
@@ -127,7 +127,7 @@ export default function Slide2_Overview() {
         {/* Bottom Dark Quote Card */}
         <div className="bg-[#0B131F] text-slate-100 p-5 rounded-xl shadow-xl border border-slate-800 mt-6">
           <p className="font-serif italic text-sm text-slate-200 leading-relaxed font-normal">
-            "One national digital higher education — five platforms, one ecosystem."
+            "One national digital platform for higher education — simple, connected, and secure."
           </p>
         </div>
       </div>

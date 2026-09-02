@@ -2,18 +2,18 @@ import React from 'react';
 
 export default function Slide1_Cover() {
   const platforms = [
-    { code: '01 UGC ERP', title: 'Central Governance', desc: '11 microservices for UGC internal operations & Ministry KPI reporting.', color: 'border-red-500/60 bg-red-950/40 text-red-400', tag: 'GOVERNANCE' },
-    { code: '02 UMS-ERP', title: 'University Management', desc: '18 modules covering complete student lifecycle & institutional ops.', color: 'border-blue-500/60 bg-blue-950/40 text-blue-400', tag: 'UNIVERSITY' },
-    { code: '03 AMS', title: 'Admission System', desc: 'High-throughput admission engine for 1M+ seasonal applicants.', color: 'border-emerald-500/60 bg-emerald-950/40 text-[#05A872]', tag: 'ADMISSION' },
-    { code: '04 NEXUS', title: 'Matchmaking Hub', desc: 'Algorithmic matching for students, faculty, universities & industry.', color: 'border-amber-500/60 bg-amber-950/40 text-[#C5A059]', tag: 'MATCHMAKING' },
-    { code: '05 GMS', title: 'Grants Management', desc: 'End-to-end research grant workflow from application to audit.', color: 'border-emerald-500/60 bg-emerald-950/40 text-emerald-400', tag: 'GRANTS' },
+    { code: '01 UGC ERP', title: 'Central Governance', desc: '11 core modules for UGC internal administration & Ministry reporting.', color: 'border-red-500/60 bg-red-950/40 text-red-400', tag: 'GOVERNANCE' },
+    { code: '02 UMS-ERP', title: 'University Management', desc: '18 modules covering complete student lifecycle & university operations.', color: 'border-blue-500/60 bg-blue-950/40 text-blue-400', tag: 'UNIVERSITY' },
+    { code: '03 AMS', title: 'Admission System', desc: 'High-speed admission system handling 1M+ applicants at the same time.', color: 'border-emerald-500/60 bg-emerald-950/40 text-[#05A872]', tag: 'ADMISSION' },
+    { code: '04 NEXUS', title: 'Matchmaking Hub', desc: 'Smart matchmaking connecting students, faculty, universities & industry.', color: 'border-amber-500/60 bg-amber-950/40 text-[#C5A059]', tag: 'MATCHMAKING' },
+    { code: '05 GMS', title: 'Grants Management', desc: 'End-to-end research grant workflow from application to final audit.', color: 'border-emerald-500/60 bg-emerald-950/40 text-emerald-400', tag: 'GRANTS' },
   ];
 
   const highlights = [
     { label: 'SINGLE SIGN-ON', val: 'BdREN TIGERfed SSO' },
     { label: 'NATIONWIDE ROLLOUT', val: 'All 8 Divisions' },
     { label: 'SECURITY & AUDIT', val: 'Central Tamper-Proof Log' },
-    { label: 'TECHNICAL ARCHITECTURE', val: 'Microservices & API Gateway' },
+    { label: 'TECHNICAL SYSTEM', val: 'Modular Architecture & API Gateway' },
   ];
 
   return (
@@ -29,7 +29,7 @@ export default function Slide1_Cover() {
           <div className="flex items-center gap-2.5">
             <div className="w-1.5 h-6 bg-[#05A872] rounded-full"></div>
             <span className="text-[11px] font-mono font-bold tracking-[0.25em] text-[#C5A059] uppercase bg-slate-900/90 border border-slate-800 px-3.5 py-1 rounded-md shadow-sm">
-              SYSTECH DIGITAL × PAKIZA SOFTWARE LIMITED · JV VENDOR PROPOSAL
+              SYSTECH DIGITAL × PAKIZA SOFTWARE LIMITED · JV PROPOSAL
             </span>
           </div>
 
@@ -93,7 +93,7 @@ export default function Slide1_Cover() {
             <span className="w-2 h-2 rounded-full bg-[#05A872] animate-pulse"></span>
             OUR FIVE FLAGSHIP PLATFORMS
           </p>
-          <span className="text-[10px] font-mono text-slate-400">TURNKEY ENTERPRISE SOLUTION</span>
+          <span className="text-[10px] font-mono text-slate-400">COMPLETE TURNKEY SOLUTION</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-3.5">
@@ -119,7 +119,7 @@ export default function Slide1_Cover() {
         </div>
       </div>
 
-      {/* KEY HIGHLIGHTS BAR (FILLING BOTTOM SPACING BEAUTIFULLY) */}
+      {/* KEY HIGHLIGHTS BAR */}
       <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-3 font-mono text-[10px]">
         {highlights.map((h, idx) => (
           <div key={idx} className="bg-[#071322] border border-slate-800 p-2.5 px-4 rounded-xl flex items-center justify-between shadow-sm">
