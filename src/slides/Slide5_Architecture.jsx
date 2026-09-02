@@ -37,7 +37,7 @@ export default function Slide5_Architecture() {
           </div>
 
           {/* CONNECTOR 1: Tier 1 -> Tier 2 */}
-          <div className="flex justify-center my-1.5 pointer-events-none">
+          <div className="flex justify-center my-2 pointer-events-none">
             <div className="w-0.5 h-6 bg-gradient-to-b from-[#C5A059] to-[#05A872] border-l-2 border-dashed border-[#C5A059] animate-pulse"></div>
           </div>
 
@@ -66,7 +66,7 @@ export default function Slide5_Architecture() {
           </div>
 
           {/* CONNECTOR 2: Tier 2 -> Tier 3 */}
-          <div className="flex justify-center my-1.5 pointer-events-none">
+          <div className="flex justify-center my-2 pointer-events-none">
             <div className="w-0.5 h-6 bg-gradient-to-b from-[#05A872] to-[#2563EB] border-l-2 border-dashed border-[#05A872] animate-pulse"></div>
           </div>
 
@@ -96,21 +96,21 @@ export default function Slide5_Architecture() {
           </div>
 
           {/* CONNECTOR 3: Tier 3 -> Tier 4 */}
-          <div className="flex justify-center my-1.5 pointer-events-none">
+          <div className="flex justify-center my-2 pointer-events-none">
             <div className="w-0.5 h-6 bg-gradient-to-b from-[#2563EB] to-blue-700 border-l-2 border-dashed border-[#2563EB] animate-pulse"></div>
           </div>
 
           {/* TIER 4: University Tier (Public & Private Universities) */}
-          <div className="relative z-10 space-y-2 font-sans">
-            <div className="bg-[#1E40AF] text-white py-2 px-4 rounded-xl text-center font-serif font-black text-sm md:text-base uppercase tracking-wider shadow border-2 border-blue-400">
+          <div className="relative z-10 space-y-3.5 font-sans">
+            <div className="bg-[#1E40AF] text-white py-2.5 px-4 rounded-xl text-center font-serif font-black text-sm md:text-base uppercase tracking-wider shadow-md border-2 border-blue-400 mb-3">
               ALL UNIVERSITIES (PUBLIC & PRIVATE) ACROSS ALL 8 DIVISIONS
             </div>
-            <div className="grid grid-cols-2 gap-3 text-center font-sans">
-              <div className="bg-[#2563EB] text-white p-3 rounded-xl font-serif font-bold text-sm md:text-base shadow-md border-2 border-blue-400 hover-float cursor-pointer">
+            <div className="grid grid-cols-2 gap-4 text-center font-sans">
+              <div className="bg-[#2563EB] text-white p-3.5 rounded-xl font-serif font-bold text-sm md:text-base shadow-md border-2 border-blue-400 hover-float cursor-pointer">
                 UMS-ERP
                 <span className="block font-sans text-xs uppercase tracking-widest opacity-95 font-black mt-0.5">UNIVERSITY OPERATIONS</span>
               </div>
-              <div className="bg-white border-2 border-[#05A872] text-[#05A872] p-3 rounded-xl font-serif font-bold text-sm md:text-base shadow-md hover-float cursor-pointer">
+              <div className="bg-white border-2 border-[#05A872] text-[#05A872] p-3.5 rounded-xl font-serif font-bold text-sm md:text-base shadow-md hover-float cursor-pointer">
                 AMS
                 <span className="block font-sans text-xs uppercase tracking-widest text-slate-950 font-black mt-0.5">ADMISSION SYSTEM</span>
               </div>
