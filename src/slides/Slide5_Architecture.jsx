@@ -4,15 +4,15 @@ export default function Slide5_Architecture() {
   return (
     <div className="relative w-full h-full bg-[#ECEFF4] text-slate-900 p-8 md:p-12 flex flex-col justify-between overflow-hidden select-none font-sans">
       {/* Top Header */}
-      <div className="relative z-10">
-        <div className="flex items-center gap-2 mb-3">
+      <div className="relative z-10 font-sans">
+        <div className="flex items-center gap-2 mb-2">
           <div className="w-6 h-[3px] bg-[#05A872]"></div>
           <span className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#05A872] uppercase font-sans">
             OUR INTEGRATION ARCHITECTURE
           </span>
         </div>
 
-        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 leading-tight mb-2">
+        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 leading-tight mb-1">
           How Our Platforms <span className="text-[#C5A059] font-serif italic font-black">Connect Together</span>
         </h1>
         
@@ -22,89 +22,95 @@ export default function Slide5_Architecture() {
       </div>
 
       {/* Main Architecture Diagram Stage (8 cols) + Right Sidebar (4 cols) */}
-      <div className="relative z-10 grid grid-cols-12 gap-8 my-auto items-center">
+      <div className="relative z-10 grid grid-cols-12 gap-8 my-auto items-stretch font-sans">
         {/* Left Architecture Flow Stage (8 cols) */}
-        <div className="col-span-12 lg:col-span-8 bg-white border-2 border-slate-300 rounded-2xl p-6 shadow-xl relative overflow-hidden flex flex-col justify-between min-h-[440px]">
+        <div className="col-span-12 lg:col-span-8 bg-white border-2 border-slate-300 rounded-2xl p-6 shadow-xl flex flex-col justify-between font-sans">
           
-          {/* Animated SVG Connection Lines with Continuous Traveling Data Pulses */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
-            {/* Top Central Authority Down to 5 Platforms */}
-            <line x1="50%" y1="18%" x2="50%" y2="28%" stroke="#C5A059" strokeWidth="3.5" className="animated-dash-line" opacity="0.9" />
-            
-            {/* Platform Row Down to Foundation Layer */}
-            <line x1="50%" y1="46%" x2="50%" y2="54%" stroke="#05A872" strokeWidth="3.5" className="animated-dash-line" opacity="0.9" />
-            
-            {/* Foundation Layer Down to All Universities */}
-            <line x1="50%" y1="73%" x2="50%" y2="82%" stroke="#2563EB" strokeWidth="3.5" className="animated-dash-line" opacity="0.9" />
-          </svg>
-
           {/* TIER 1: Governance Tier (Central Authority) */}
-          <div className="relative z-10 flex flex-col items-center">
-            <div className="bg-[#C5A059] text-slate-950 px-10 py-3.5 rounded-xl shadow-lg font-serif font-black text-center text-xl md:text-2xl border-2 border-amber-300 hover-float cursor-pointer w-full max-w-md">
+          <div className="relative z-10 flex flex-col items-center font-sans">
+            <div className="bg-[#C5A059] text-slate-950 px-10 py-3 rounded-xl shadow-lg font-serif font-black text-center text-xl md:text-2xl border-2 border-amber-300 hover-float cursor-pointer w-full max-w-md">
               CENTRAL AUTHORITY (UGC)
-              <span className="block font-mono text-xs uppercase tracking-widest text-slate-950 font-black mt-1">
+              <span className="block font-bold text-xs uppercase tracking-widest text-slate-950 mt-0.5 font-sans">
                 MINISTRY & LEADERSHIP GOVERNANCE DASHBOARDS
               </span>
             </div>
           </div>
 
-          {/* TIER 2: Five Flagship Platforms Row (Reordered: UGC ERP, UMS-ERP, AMS, NEXUS, GMS) */}
-          <div className="relative z-10 grid grid-cols-5 gap-2.5 text-center font-serif font-bold text-xs py-2">
-            <div className="bg-[#D32F2F] text-white p-3.5 rounded-xl shadow-md border-2 border-red-400 hover-float cursor-pointer">
+          {/* CONNECTOR 1: Tier 1 -> Tier 2 */}
+          <div className="flex justify-center my-1.5 pointer-events-none">
+            <div className="w-0.5 h-6 bg-gradient-to-b from-[#C5A059] to-[#05A872] border-l-2 border-dashed border-[#C5A059] animate-pulse"></div>
+          </div>
+
+          {/* TIER 2: Five Flagship Platforms Row */}
+          <div className="relative z-10 grid grid-cols-5 gap-2.5 text-center font-serif font-bold text-xs">
+            <div className="bg-[#D32F2F] text-white p-3 rounded-xl shadow-md border-2 border-red-400 hover-float cursor-pointer">
               <span className="block font-black text-lg md:text-xl">UGC ERP</span>
-              <span className="block font-sans text-xs uppercase tracking-widest opacity-95 font-black mt-1">GOVERNANCE</span>
+              <span className="block font-sans text-xs uppercase tracking-widest opacity-95 font-black mt-0.5">GOVERNANCE</span>
             </div>
-            <div className="bg-[#2563EB] text-white p-3.5 rounded-xl shadow-md border-2 border-blue-400 hover-float cursor-pointer">
+            <div className="bg-[#2563EB] text-white p-3 rounded-xl shadow-md border-2 border-blue-400 hover-float cursor-pointer">
               <span className="block font-black text-lg md:text-xl">UMS-ERP</span>
-              <span className="block font-sans text-xs uppercase tracking-widest opacity-95 font-black mt-1">UNIVERSITY</span>
+              <span className="block font-sans text-xs uppercase tracking-widest opacity-95 font-black mt-0.5">UNIVERSITY</span>
             </div>
-            <div className="bg-white border-2 border-[#05A872] text-[#05A872] p-3.5 rounded-xl shadow-md hover-float cursor-pointer">
+            <div className="bg-white border-2 border-[#05A872] text-[#05A872] p-3 rounded-xl shadow-md hover-float cursor-pointer">
               <span className="block font-black text-lg md:text-xl">AMS</span>
-              <span className="block font-sans text-xs uppercase tracking-widest text-slate-950 font-black mt-1">ADMISSION</span>
+              <span className="block font-sans text-xs uppercase tracking-widest text-slate-950 font-black mt-0.5">ADMISSION</span>
             </div>
-            <div className="bg-[#D9A74A] text-slate-950 p-3.5 rounded-xl shadow-md border-2 border-amber-600 hover-float cursor-pointer">
+            <div className="bg-[#D9A74A] text-slate-950 p-3 rounded-xl shadow-md border-2 border-amber-600 hover-float cursor-pointer">
               <span className="block font-black text-lg md:text-xl">NEXUS</span>
-              <span className="block font-sans text-xs uppercase tracking-widest text-slate-950 font-black mt-1">MATCHING</span>
+              <span className="block font-sans text-xs uppercase tracking-widest text-slate-950 font-black mt-0.5">MATCHING</span>
             </div>
-            <div className="bg-[#05A872] text-white p-3.5 rounded-xl shadow-md border-2 border-emerald-400 hover-float cursor-pointer">
+            <div className="bg-[#05A872] text-white p-3 rounded-xl shadow-md border-2 border-emerald-400 hover-float cursor-pointer">
               <span className="block font-black text-lg md:text-xl">GMS</span>
-              <span className="block font-sans text-xs uppercase tracking-widest opacity-95 font-black mt-1">GRANTS</span>
+              <span className="block font-sans text-xs uppercase tracking-widest opacity-95 font-black mt-0.5">GRANTS</span>
             </div>
           </div>
 
-          {/* TIER 3: Foundation Layer (Glowing Border Wave) */}
-          <div className="relative z-10 border-2 border-[#05A872] rounded-xl p-3.5 bg-gradient-to-r from-emerald-50/80 via-white to-emerald-50/80 shadow-xl glowing-border-wave">
-            <div className="text-xs md:text-sm font-mono font-black text-[#05A872] text-center uppercase tracking-widest mb-2 flex items-center justify-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-[#05A872] animate-pulse"></span>
-              OUR COMMON DIGITAL LAYER · SHARED IDENTITY · SHARED SECURITY
+          {/* CONNECTOR 2: Tier 2 -> Tier 3 */}
+          <div className="flex justify-center my-1.5 pointer-events-none">
+            <div className="w-0.5 h-6 bg-gradient-to-b from-[#05A872] to-[#2563EB] border-l-2 border-dashed border-[#05A872] animate-pulse"></div>
+          </div>
+
+          {/* TIER 3: Foundation Layer */}
+          <div className="relative z-10 border-2 border-[#05A872] rounded-xl p-3.5 bg-gradient-to-r from-emerald-50 via-amber-50/60 to-emerald-50 shadow-lg transition-all duration-300">
+            <div className="text-center mb-2.5">
+              <span className="inline-flex items-center gap-2 bg-white border-2 border-[#05A872]/60 px-4 py-1 rounded-full shadow-xs text-xs md:text-sm font-bold text-[#05A872] uppercase tracking-widest font-sans">
+                <span className="w-2 h-2 rounded-full bg-[#05A872] animate-pulse"></span>
+                OUR COMMON DIGITAL LAYER · SHARED IDENTITY · SHARED SECURITY
+              </span>
             </div>
-            <div className="grid grid-cols-4 gap-2.5 text-center text-xs md:text-sm font-mono font-black">
-              <div className="bg-white border-2 border-slate-300 py-2.5 px-2 rounded-lg text-slate-950 shadow-xs hover-float">
+            
+            <div className="grid grid-cols-4 gap-2.5 text-center text-xs md:text-sm font-bold font-sans">
+              <div className="bg-white border-2 border-slate-300 hover:border-[#C5A059] py-2.5 px-2 rounded-lg text-slate-950 shadow-xs hover-float transition-all duration-300 font-sans">
                 BdREN TIGERfed SSO
               </div>
-              <div className="bg-white border-2 border-slate-300 py-2.5 px-2 rounded-lg text-slate-950 shadow-xs hover-float">
+              <div className="bg-white border-2 border-slate-300 hover:border-[#05A872] py-2.5 px-2 rounded-lg text-slate-950 shadow-xs hover-float transition-all duration-300 font-sans">
                 API Gateway
               </div>
-              <div className="bg-white border-2 border-slate-300 py-2.5 px-2 rounded-lg text-slate-950 shadow-xs hover-float">
+              <div className="bg-white border-2 border-slate-300 hover:border-[#2563EB] py-2.5 px-2 rounded-lg text-slate-950 shadow-xs hover-float transition-all duration-300 font-sans">
                 RBAC & 2FA
               </div>
-              <div className="bg-white border-2 border-slate-300 py-2.5 px-2 rounded-lg text-slate-950 shadow-xs hover-float">
+              <div className="bg-white border-2 border-slate-300 hover:border-[#D32F2F] py-2.5 px-2 rounded-lg text-slate-950 shadow-xs hover-float transition-all duration-300 font-sans">
                 Audit Logging
               </div>
             </div>
           </div>
 
+          {/* CONNECTOR 3: Tier 3 -> Tier 4 */}
+          <div className="flex justify-center my-1.5 pointer-events-none">
+            <div className="w-0.5 h-6 bg-gradient-to-b from-[#2563EB] to-blue-700 border-l-2 border-dashed border-[#2563EB] animate-pulse"></div>
+          </div>
+
           {/* TIER 4: University Tier (Public & Private Universities) */}
-          <div className="relative z-10 space-y-2">
-            <div className="bg-[#1E40AF] text-white py-2.5 px-4 rounded-xl text-center font-serif font-black text-sm md:text-base uppercase tracking-wider shadow border-2 border-blue-400">
+          <div className="relative z-10 space-y-2 font-sans">
+            <div className="bg-[#1E40AF] text-white py-2 px-4 rounded-xl text-center font-serif font-black text-sm md:text-base uppercase tracking-wider shadow border-2 border-blue-400">
               ALL UNIVERSITIES (PUBLIC & PRIVATE) ACROSS ALL 8 DIVISIONS
             </div>
-            <div className="grid grid-cols-2 gap-3 text-center">
-              <div className="bg-[#2563EB] text-white p-3.5 rounded-xl font-serif font-bold text-sm md:text-base shadow-md border-2 border-blue-400 hover-float cursor-pointer">
+            <div className="grid grid-cols-2 gap-3 text-center font-sans">
+              <div className="bg-[#2563EB] text-white p-3 rounded-xl font-serif font-bold text-sm md:text-base shadow-md border-2 border-blue-400 hover-float cursor-pointer">
                 UMS-ERP
                 <span className="block font-sans text-xs uppercase tracking-widest opacity-95 font-black mt-0.5">UNIVERSITY OPERATIONS</span>
               </div>
-              <div className="bg-white border-2 border-[#05A872] text-[#05A872] p-3.5 rounded-xl font-serif font-bold text-sm md:text-base shadow-md hover-float cursor-pointer">
+              <div className="bg-white border-2 border-[#05A872] text-[#05A872] p-3 rounded-xl font-serif font-bold text-sm md:text-base shadow-md hover-float cursor-pointer">
                 AMS
                 <span className="block font-sans text-xs uppercase tracking-widest text-slate-950 font-black mt-0.5">ADMISSION SYSTEM</span>
               </div>
@@ -114,9 +120,9 @@ export default function Slide5_Architecture() {
         </div>
 
         {/* Right Sidebar Checklist (4 cols) */}
-        <div className="col-span-12 lg:col-span-4 bg-[#0B131F] text-slate-100 p-6 md:p-8 rounded-2xl shadow-xl flex flex-col justify-between border-2 border-slate-800">
-          <div className="space-y-4">
-            <p className="text-xs md:text-sm font-mono font-bold tracking-[0.2em] text-[#C5A059] uppercase">
+        <div className="col-span-12 lg:col-span-4 bg-[#0B131F] text-slate-100 p-6 md:p-8 rounded-2xl shadow-xl flex flex-col justify-between border-2 border-slate-800 font-sans">
+          <div className="space-y-4 font-sans">
+            <p className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#C5A059] uppercase font-sans">
               WHAT WE BUILD ONCE, USE EVERYWHERE
             </p>
 
@@ -142,8 +148,8 @@ export default function Slide5_Architecture() {
             </div>
           </div>
 
-          <div className="border-t-2 border-slate-800 pt-4 mt-4">
-            <p className="text-xs md:text-sm font-mono text-[#C5A059] uppercase tracking-widest font-black">
+          <div className="border-t-2 border-slate-800 pt-4 mt-4 font-sans">
+            <p className="text-xs md:text-sm text-[#C5A059] uppercase tracking-widest font-black font-sans">
               SINGLE IDENTITY · SINGLE GATEWAY · ZERO DATA SILOS
             </p>
           </div>
@@ -151,7 +157,7 @@ export default function Slide5_Architecture() {
       </div>
 
       {/* Footer */}
-      <div className="relative z-10 border-t-2 border-slate-300 pt-3 flex justify-between font-mono text-xs md:text-sm font-bold text-slate-800">
+      <div className="relative z-10 border-t-2 border-slate-300 pt-3 flex justify-between text-xs md:text-sm font-bold text-slate-800 font-sans">
         <span>05 · OUR ARCHITECTURE · SYSTECH × PAKIZA LIMITED</span>
         <span className="text-[#05A872]">FEDERATED SYSTEM ARCHITECTURE</span>
       </div>
