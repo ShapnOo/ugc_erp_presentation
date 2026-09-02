@@ -216,7 +216,7 @@ export default function PresentationLayout() {
       {/* 1. FULL PRESENTATION MODE VIEWPORT (Zero Overlay - Pure Audience View) */}
       {/* ========================================================================= */}
       {isPresentationMode ? (
-        <div className="relative w-full h-full bg-slate-950 flex flex-col justify-between overflow-hidden cursor-none">
+        <div className="relative w-full h-full bg-slate-950 flex flex-col justify-between overflow-hidden cursor-default">
           {/* Top Subtle Progress Indicator */}
           <div className="w-full bg-slate-900/40 h-0.5 z-50">
             <div

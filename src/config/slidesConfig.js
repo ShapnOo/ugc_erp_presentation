@@ -246,6 +246,17 @@ export const SLIDES_CONFIG = [
   {
     id: 'slide-17',
     number: '17',
+    title: 'Indicative Programme Delivery Roadmap',
+    subtitle: 'Programme Timeline & Phasing',
+    category: 'Delivery Roadmap',
+    component: Slide21_ImplementationRoadmap,
+    notes: `ROADMAP TALKING POINTS:
+• Phased delivery timeline for all 5 platforms across Bangladesh.
+• Zero-downtime strategy delivering early wins without operational disruption.`
+  },
+  {
+    id: 'slide-18',
+    number: '18',
     title: 'Multi-Disciplinary Enterprise Delivery',
     subtitle: 'Our Delivery Team',
     category: 'Delivery Team',
@@ -256,8 +267,8 @@ export const SLIDES_CONFIG = [
 • 100% Dedicated JV Consortium Team — not a shared bench.`
   },
   {
-    id: 'slide-18',
-    number: '18',
+    id: 'slide-19',
+    number: '19',
     title: 'Why Our Consortium.',
     subtitle: 'Why Our Consortium',
     category: 'Consortium Advantage',
@@ -270,8 +281,8 @@ export const SLIDES_CONFIG = [
 5. Outcome Commitment: SLA measured on adoption, satisfaction & uptime.`
   },
   {
-    id: 'slide-19',
-    number: '19',
+    id: 'slide-20',
+    number: '20',
     title: 'A Programme We Co-Own With You',
     subtitle: 'Our Approach',
     category: 'Co-Ownership Model',
@@ -281,21 +292,6 @@ export const SLIDES_CONFIG = [
 • B: Outcome-Driven (SLAs tied to adoption, satisfaction, uptime).
 • C: Knowledge Transfer (Empower your internal team, no vendor lock-in).
 • D: Long Partnership (Multi-year support built-in).`
-  },
-
-  /* ========================================================================= */
-  /* NEW STRATEGIC SLIDES (ROADMAP, SLA, EXECUTIVE SUMMARY) */
-  /* ========================================================================= */
-  {
-    id: 'slide-20',
-    number: '20',
-    title: 'Indicative Programme Delivery Roadmap',
-    subtitle: 'Programme Timeline & Phasing',
-    category: 'Delivery Roadmap',
-    component: Slide21_ImplementationRoadmap,
-    notes: `ROADMAP TALKING POINTS:
-• Phased delivery timeline for all 5 platforms across Bangladesh.
-• Zero-downtime strategy delivering early wins without operational disruption.`
   },
   {
     id: 'slide-21',
@@ -321,10 +317,6 @@ export const SLIDES_CONFIG = [
 • Standard Core + 10 Anchor University Customisations.
 • 100% Dedicated Local Delivery Team.`
   },
-
-  /* ========================================================================= */
-  /* CLOSING SLIDE */
-  /* ========================================================================= */
   {
     id: 'slide-23',
     number: '23',
