@@ -7,7 +7,7 @@ export default function Slide20_LetsBegin() {
       title: 'Discovery & Alignment',
       desc: 'Detailed review of UGC requirements, constraints, and evaluation criteria.',
       badge: 'PHASE 01',
-      color: 'border-emerald-500/60 bg-[#072C2B] text-emerald-400',
+      color: 'border-emerald-500/80 bg-[#072C2B] text-emerald-400',
       numColor: 'text-[#05A872]'
     },
     {
@@ -15,7 +15,7 @@ export default function Slide20_LetsBegin() {
       title: 'Technical Demo',
       desc: 'Live walkthrough of our 5 platforms, microservices architecture, and SSO.',
       badge: 'PHASE 02',
-      color: 'border-[#C5A059]/60 bg-[#1C2430] text-[#C5A059]',
+      color: 'border-[#C5A059]/80 bg-[#1C2430] text-[#C5A059]',
       numColor: 'text-[#C5A059]'
     },
     {
@@ -23,7 +23,7 @@ export default function Slide20_LetsBegin() {
       title: 'Bid Conference',
       desc: 'Joint review of project governance, 3-year SLA commitment, and phasing.',
       badge: 'PHASE 03',
-      color: 'border-red-500/60 bg-[#2B0E14] text-red-400',
+      color: 'border-red-500/80 bg-[#2B0E14] text-red-400',
       numColor: 'text-red-500'
     },
     {
@@ -31,7 +31,7 @@ export default function Slide20_LetsBegin() {
       title: 'Team Mobilisation',
       desc: 'Once awarded — immediate Day-1 deployment of our local engineering team.',
       badge: 'PHASE 04',
-      color: 'border-blue-500/60 bg-[#0E1E38] text-blue-400',
+      color: 'border-blue-500/80 bg-[#0E1E38] text-blue-400',
       numColor: 'text-blue-400'
     }
   ];
@@ -45,9 +45,9 @@ export default function Slide20_LetsBegin() {
 
   return (
     <div className="relative w-full h-full bg-[#0B131F] text-slate-100 p-8 md:p-12 flex flex-col justify-between overflow-hidden select-none font-sans">
-      {/* Background Radial Glow Effects */}
-      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#05A872]/20 rounded-full blur-[140px] pointer-events-none -translate-x-1/3 -translate-y-1/3"></div>
-      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#C5A059]/15 rounded-full blur-[140px] pointer-events-none translate-x-1/3 translate-y-1/3"></div>
+      {/* Background Pulsing Radial Glow Effects */}
+      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#05A872]/20 rounded-full blur-[140px] pointer-events-none -translate-x-1/3 -translate-y-1/3 animate-pulse"></div>
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#C5A059]/15 rounded-full blur-[140px] pointer-events-none translate-x-1/3 translate-y-1/3 animate-pulse"></div>
 
       {/* TOP HEADER */}
       <div className="relative z-10 space-y-2">
@@ -58,8 +58,9 @@ export default function Slide20_LetsBegin() {
               NEXT STEPS · EXECUTIVE SUMMARY & PATH FORWARD
             </span>
           </div>
-          <span className="text-[10px] font-mono font-bold text-[#05A872] bg-emerald-950/80 border border-emerald-800 px-3 py-1 rounded-md">
-            ● READY FOR IMMEDIATE MOBILISATION
+          <span className="text-[10px] font-mono font-bold text-[#05A872] bg-emerald-950/80 border border-emerald-800 px-3 py-1 rounded-md flex items-center gap-1.5 shadow-lg">
+            <span className="w-2 h-2 rounded-full bg-[#05A872] animate-ping"></span>
+            READY FOR IMMEDIATE MOBILISATION
           </span>
         </div>
 
@@ -72,7 +73,7 @@ export default function Slide20_LetsBegin() {
         </p>
       </div>
 
-      {/* SECTION 1: 4-STEP CONNECTED WORKFLOW PIPELINE WITH ANIMATED RAYS */}
+      {/* SECTION 1: 4-STEP CONNECTED WORKFLOW PIPELINE WITH ANIMATED TRAVELING LIGHT PULSES */}
       <div className="relative z-10 my-auto py-2 space-y-3">
         <div className="flex items-center justify-between">
           <p className="text-[10px] font-mono font-bold tracking-[0.25em] text-[#C5A059] uppercase flex items-center gap-2">
@@ -85,24 +86,41 @@ export default function Slide20_LetsBegin() {
         {/* 4 Pipeline Cards Stage */}
         <div className="relative grid grid-cols-1 md:grid-cols-4 gap-4">
           
-          {/* Animated SVG Dashflow Rays connecting Step 1 -> 2 -> 3 -> 4 */}
+          {/* Animated SVG Dashflow & Traveling Light Pulses connecting Step 1 -> 2 -> 3 -> 4 */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 hidden md:block">
-            <line x1="25%" y1="50%" x2="27%" y2="50%" stroke="#05A872" strokeWidth="2.5" className="animated-dash-line" opacity="0.8" />
-            <line x1="50%" y1="50%" x2="52%" y2="50%" stroke="#C5A059" strokeWidth="2.5" className="animated-dash-line" opacity="0.8" />
-            <line x1="75%" y1="50%" x2="77%" y2="50%" stroke="#D32F2F" strokeWidth="2.5" className="animated-dash-line" opacity="0.8" />
+            {/* Step 1 to Step 2 Line & Pulse */}
+            <line x1="23%" y1="50%" x2="27%" y2="50%" stroke="#05A872" strokeWidth="3" className="animated-dash-line" opacity="0.9" />
+            <circle r="4" fill="#05A872">
+              <animate attributeName="cx" values="23%;27%;23%" dur="2.5s" repeatCount="indefinite" />
+              <animate attributeName="cy" values="50%;50%;50%" dur="2.5s" repeatCount="indefinite" />
+            </circle>
+
+            {/* Step 2 to Step 3 Line & Pulse */}
+            <line x1="48%" y1="50%" x2="52%" y2="50%" stroke="#C5A059" strokeWidth="3" className="animated-dash-line" opacity="0.9" />
+            <circle r="4" fill="#C5A059">
+              <animate attributeName="cx" values="48%;52%;48%" dur="2.5s" repeatCount="indefinite" />
+              <animate attributeName="cy" values="50%;50%;50%" dur="2.5s" repeatCount="indefinite" />
+            </circle>
+
+            {/* Step 3 to Step 4 Line & Pulse */}
+            <line x1="73%" y1="50%" x2="77%" y2="50%" stroke="#D32F2F" strokeWidth="3" className="animated-dash-line" opacity="0.9" />
+            <circle r="4" fill="#D32F2F">
+              <animate attributeName="cx" values="73%;77%;73%" dur="2.5s" repeatCount="indefinite" />
+              <animate attributeName="cy" values="50%;50%;50%" dur="2.5s" repeatCount="indefinite" />
+            </circle>
           </svg>
 
-          {pathForwardSteps.map((step) => (
+          {pathForwardSteps.map((step, idx) => (
             <div
               key={step.num}
-              className={`relative z-10 border ${step.color} p-5 rounded-2xl shadow-xl flex flex-col justify-between h-44 hover-float cursor-pointer`}
+              className={`relative z-10 border-2 ${step.color} p-5 rounded-2xl shadow-xl flex flex-col justify-between h-44 hover-float glowing-border-wave cursor-pointer transition-all duration-300 transform hover:scale-[1.03]`}
             >
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <span className={`font-serif text-3xl font-black ${step.numColor}`}>
                     {step.num}
                   </span>
-                  <span className="text-[9px] font-mono font-bold px-2 py-0.5 rounded bg-slate-950/60 border border-slate-700/60 uppercase">
+                  <span className="text-[9px] font-mono font-bold px-2 py-0.5 rounded bg-slate-950/70 border border-slate-700/80 uppercase">
                     {step.badge}
                   </span>
                 </div>
@@ -113,15 +131,23 @@ export default function Slide20_LetsBegin() {
                   {step.desc}
                 </p>
               </div>
+
+              {/* Pulsing indicator on step 4 */}
+              {idx === 3 && (
+                <div className="flex items-center gap-1.5 pt-2 border-t border-blue-900/60 text-[9px] font-mono font-bold text-blue-300">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-ping"></span>
+                  <span>DAY-1 EXECUTION READY</span>
+                </div>
+              )}
             </div>
           ))}
         </div>
       </div>
 
-      {/* SECTION 2: 4 VALUE SUMMARY CARDS (FILLING THE MIDDLE/LOWER CANVAS BEAUTIFULLY) */}
+      {/* SECTION 2: 4 VALUE SUMMARY CARDS */}
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-4 gap-3 font-sans my-1">
         {valueSummary.map((val, idx) => (
-          <div key={idx} className="bg-[#091526] border border-slate-800/90 p-3.5 rounded-xl flex flex-col justify-between shadow-lg hover-float">
+          <div key={idx} className="bg-[#091526] border border-slate-800 p-3.5 rounded-xl flex flex-col justify-between shadow-lg hover-float hover:border-[#05A872]/60 transition-all">
             <span className="text-[9px] font-mono font-bold text-[#05A872] uppercase tracking-wider block mb-1">
               {val.label}
             </span>
@@ -133,7 +159,7 @@ export default function Slide20_LetsBegin() {
       </div>
 
       {/* SECTION 3: EXECUTIVE CLOSING BANNER */}
-      <div className="relative z-10 bg-[#C5A059] text-slate-950 -mx-8 -mb-8 md:-mx-12 md:-mb-12 p-4 px-8 md:px-12 flex justify-between items-center font-sans shadow-2xl">
+      <div className="relative z-10 bg-[#C5A059] text-slate-950 -mx-8 -mb-8 md:-mx-12 md:-mb-12 p-4 px-8 md:px-12 flex justify-between items-center font-sans shadow-2xl border-t-2 border-amber-300">
         <div>
           <h4 className="font-serif font-black text-base md:text-lg uppercase tracking-tight text-slate-950">
             SYSTECH DIGITAL × PAKIZA SOFTWARE — JOINT VENTURE
@@ -147,11 +173,13 @@ export default function Slide20_LetsBegin() {
           "Thank you · We are ready to transform higher education together."
         </div>
 
-        <div className="text-right">
-          <span className="font-serif font-black text-sm block">Let's Build</span>
-          <span className="text-[9px] font-mono font-bold tracking-widest text-slate-900 uppercase bg-slate-950 text-[#C5A059] px-2 py-0.5 rounded">
-            IMMEDIATE MOBILISATION READY
-          </span>
+        <div className="text-right flex items-center gap-2">
+          <div>
+            <span className="font-serif font-black text-sm block">Let's Build</span>
+            <span className="text-[9px] font-mono font-bold tracking-widest text-slate-900 uppercase bg-slate-950 text-[#C5A059] px-2 py-0.5 rounded shadow">
+              IMMEDIATE MOBILISATION READY
+            </span>
+          </div>
         </div>
       </div>
     </div>
