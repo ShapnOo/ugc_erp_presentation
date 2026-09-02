@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'DM Serif Display', 'Playfair Display', Georgia, serif;
+    --font-display: 'DM Serif Display', 'Playfair Display', Georgia, serif;
+  }
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-serif {
+  font-family: 'DM Serif Display', 'Playfair Display', Georgia, serif;
+}
+
+.font-display {
+  font-family: 'DM Serif Display', 'Playfair Display', Georgia, serif;
+}
+
+/* Custom Executive Color Tokens */
+:root {
+  --color-executive-navy: #0B131F;
+  --color-executive-cream: #F4F0E8;
+  --color-brand-emerald: #05A872;
+  --color-brand-gold: #C5A059;
+}
+
+/* Slide Canvas Aspect Ratio Container */
+.slide-canvas {
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ========================================================================= */
+/* DYNAMIC & SOOTHING ANIMATION SUITE */
+/* ========================================================================= */
+
+/* 1. Animated Network Lines (Traveling Light Particles along connection paths) */
+.animated-dash-line {
+  stroke-dasharray: 6 6;
+  animation: dashFlow 2s linear infinite;
+}
+
+@keyframes dashFlow {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* 2. Pulsing Hub Ring Glow */
+.hub-pulse-ring {
+  animation: hubPulse 3s ease-out infinite;
+}
+
+@keyframes hubPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(5, 168, 114, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(5, 168, 114, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(5, 168, 114, 0);
+  }
+}
+
+/* 3. Glowing Border Wave Effect for Microservices & Pillar Cards */
+.glowing-border-wave {
+  position: relative;
+}
+
+.glowing-border-wave::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, rgba(5, 168, 114, 0.4), rgba(197, 160, 89, 0.4), transparent);
+  background-size: 200% 100%;
+  animation: borderWave 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes borderWave {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* 4. Slow Ambient Floating Gradient Glow (Top-Left & Bottom-Right Orbs) */
+.ambient-glow-orb-1 {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.22;
+  pointer-events: none;
+  animation: floatOrb1 14s ease-in-out infinite alternate;
+}
+
+.ambient-glow-orb-2 {
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.18;
+  pointer-events: none;
+  animation: floatOrb2 18s ease-in-out infinite alternate;
+}
+
+@keyframes floatOrb1 {
+  0% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+    opacity: 0.18;
+  }
+  50% {
+    transform: translate(80px, 50px) scale(1.2) rotate(180deg);
+    opacity: 0.28;
+  }
+  100% {
+    transform: translate(-40px, 60px) scale(0.9) rotate(360deg);
+    opacity: 0.20;
+  }
+}
+
+@keyframes floatOrb2 {
+  0% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translate(-60px, -50px) scale(1.18) rotate(-180deg);
+    opacity: 0.25;
+  }
+  100% {
+    transform: translate(50px, -40px) scale(0.92) rotate(-360deg);
+    opacity: 0.18;
+  }
+}
+
+/* 5. Soothing Sub-mesh Geometric Pattern with Slow Wave Shimmer */
+.soothing-grid-pattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: radial-gradient(#05A872 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  animation: gridShimmer 20s linear infinite;
+}
+
+@keyframes gridShimmer {
+  0% {
+    background-position: 0px 0px;
+  }
+  50% {
+    background-position: 14px 14px;
+  }
+  100% {
+    background-position: 28px 28px;
+  }
+}
+
+/* 6. Card Hover Float Effects */
+.hover-float {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.hover-float:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.12);
+}
+
+/* Slide Entrance Animations */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Print Styles for PDF Export */
+@media print {
+  body {
+    background: #000 !important;
+    color: #fff !important;
+  }
+  header, aside, footer, button, .no-print {
+    display: none !important;
+  }
+  .slide-canvas {
+    width: 100vw !important;
+    height: 100vh !important;
+    aspect-ratio: 16 / 9 !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+}
