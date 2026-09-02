@@ -36,7 +36,7 @@ export default function Slide18_Consortium() {
       <div className="relative z-10 grid grid-cols-12 gap-5 my-auto items-stretch">
         
         {/* Card 01: Featured Dark Hero Box (6 cols) */}
-        <div className="col-span-12 lg:col-span-6 bg-[#0B131F] text-slate-100 p-6 md:p-7 rounded-2xl shadow-2xl flex flex-col justify-between border-2 border-[#C5A059]/40 glowing-border-wave hover-float cursor-pointer">
+        <div className="col-span-12 lg:col-span-6 bg-[#0B131F] text-slate-100 p-6 md:p-7 rounded-2xl shadow-2xl flex flex-col justify-between border-2 border-[#C5A059] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer">
           <div>
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
@@ -75,7 +75,7 @@ export default function Slide18_Consortium() {
         </div>
 
         {/* Card 02: Higher-Ed Specialism (6 cols) */}
-        <div className="col-span-12 lg:col-span-6 bg-white border-2 border-emerald-400/80 p-6 md:p-7 rounded-2xl shadow-lg flex flex-col justify-between hover-float cursor-pointer">
+        <div className="col-span-12 lg:col-span-6 bg-white border-2 border-emerald-400 p-6 md:p-7 rounded-2xl shadow-lg flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 cursor-pointer">
           <div>
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
@@ -114,7 +114,7 @@ export default function Slide18_Consortium() {
         </div>
 
         {/* Card 03: Local Presence (4 cols) */}
-        <div className="col-span-12 lg:col-span-4 bg-white border border-slate-300 p-5 rounded-2xl shadow-sm flex flex-col justify-between hover-float cursor-pointer">
+        <div className="col-span-12 lg:col-span-4 bg-white border border-slate-300 p-5 rounded-2xl shadow-sm flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 cursor-pointer">
           <div>
             <div className="flex items-center justify-between mb-2">
               <span className="font-serif text-2xl font-black text-red-600">03</span>
@@ -134,7 +134,7 @@ export default function Slide18_Consortium() {
         </div>
 
         {/* Card 04: Long-Term Support (4 cols) */}
-        <div className="col-span-12 lg:col-span-4 bg-white border border-slate-300 p-5 rounded-2xl shadow-sm flex flex-col justify-between hover-float cursor-pointer">
+        <div className="col-span-12 lg:col-span-4 bg-white border border-slate-300 p-5 rounded-2xl shadow-sm flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 cursor-pointer">
           <div>
             <div className="flex items-center justify-between mb-2">
               <span className="font-serif text-2xl font-black text-blue-600">04</span>
@@ -154,7 +154,7 @@ export default function Slide18_Consortium() {
         </div>
 
         {/* Card 05: Outcome Commitment (4 cols) */}
-        <div className="col-span-12 lg:col-span-4 bg-white border border-slate-300 p-5 rounded-2xl shadow-sm flex flex-col justify-between hover-float cursor-pointer">
+        <div className="col-span-12 lg:col-span-4 bg-white border border-slate-300 p-5 rounded-2xl shadow-sm flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 cursor-pointer">
           <div>
             <div className="flex items-center justify-between mb-2">
               <span className="font-serif text-2xl font-black text-[#C5A059]">05</span>
