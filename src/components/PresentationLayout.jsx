@@ -6,7 +6,6 @@ import AmbientBackground from './AmbientBackground';
 import {
   Play,
   Grid,
-  FileText,
   ChevronLeft,
   ChevronRight,
   Monitor,
@@ -21,7 +20,6 @@ import {
 } from 'lucide-react';
 
 import SlideOverviewModal from './SlideOverviewModal';
-import SpeakerNotesDrawer from './SpeakerNotesDrawer';
 import KeyboardShortcutsModal from './KeyboardShortcutsModal';
 
 export default function PresentationLayout() {
@@ -33,7 +31,6 @@ export default function PresentationLayout() {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [isPresentationMode, setIsPresentationMode] = useState(isViewOnlyWindow);
   const [showOverview, setShowOverview] = useState(false);
-  const [showNotes, setShowNotes] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
   const [direction, setDirection] = useState('right');
   const [selectedCategory, setSelectedCategory] = useState('ALL');
@@ -220,13 +217,6 @@ export default function PresentationLayout() {
             setShowOverview((prev) => !prev);
           }
           break;
-        case 'n':
-        case 'N':
-          if (!isViewOnlyWindow) {
-            e.preventDefault();
-            setShowNotes((prev) => !prev);
-          }
-          break;
         case '?':
           if (!isViewOnlyWindow) {
             e.preventDefault();
@@ -234,10 +224,9 @@ export default function PresentationLayout() {
           }
           break;
         case 'Escape':
-          if (showOverview || showHelp || showNotes) {
+          if (showOverview || showHelp) {
             setShowOverview(false);
             setShowHelp(false);
-            setShowNotes(false);
           } else if (isPresentationMode && !isViewOnlyWindow) {
             exitPresentation();
           }
@@ -249,7 +238,7 @@ export default function PresentationLayout() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentSlideIndex, isPresentationMode, showOverview, showHelp, showNotes, isViewOnlyWindow]);
+  }, [currentSlideIndex, isPresentationMode, showOverview, showHelp, isViewOnlyWindow]);
 
   // Render Presenter View window if query param ?mode=presenter
   if (isPresenterWindow) {
@@ -450,18 +439,6 @@ export default function PresentationLayout() {
               </button>
 
               <button
-                onClick={() => setShowNotes((prev) => !prev)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
-                  showNotes
-                    ? 'bg-[#C5A059]/20 text-[#C5A059] border border-[#C5A059]/40'
-                    : 'text-slate-300 hover:bg-slate-800 border border-slate-800'
-                }`}
-              >
-                <FileText className="w-4 h-4" />
-                <span className="hidden sm:inline">Notes</span>
-              </button>
-
-              <button
                 onClick={() => setShowOverview(true)}
                 className="px-3 py-1.5 text-slate-300 hover:bg-slate-800 border border-slate-800 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer"
               >
@@ -627,12 +604,6 @@ export default function PresentationLayout() {
         slides={SLIDES_CONFIG}
         currentSlideIndex={currentSlideIndex}
         onSelectSlide={goToSlide}
-      />
-
-      <SpeakerNotesDrawer
-        isOpen={showNotes}
-        onClose={() => setShowNotes(false)}
-        slide={currentSlide}
       />
 
       <KeyboardShortcutsModal
