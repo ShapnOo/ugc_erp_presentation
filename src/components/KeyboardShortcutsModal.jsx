@@ -1,7 +1,9 @@
 import React from 'react';
-import { X, Command, Keyboard } from 'lucide-react';
+import { X, Keyboard } from 'lucide-react';
 
-export default function KeyboardShortcutsModal({ onClose }) {
+export default function KeyboardShortcutsModal({ isOpen, onClose }) {
+  if (!isOpen) return null;
+
   const shortcuts = [
     { key: '→ / Space / PageDown', desc: 'Next slide' },
     { key: '← / PageUp', desc: 'Previous slide' },
@@ -13,8 +15,14 @@ export default function KeyboardShortcutsModal({ onClose }) {
   ];
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
-      <div className="bg-[#0D1829] border border-slate-700/80 rounded-2xl max-w-md w-full p-6 shadow-2xl text-slate-100 relative">
+    <div
+      onClick={onClose}
+      className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 cursor-pointer"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="bg-[#0D1829] border border-slate-700/80 rounded-2xl max-w-md w-full p-6 shadow-2xl text-slate-100 relative cursor-default"
+      >
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-slate-800">
           <div className="flex items-center gap-2">
@@ -49,7 +57,7 @@ export default function KeyboardShortcutsModal({ onClose }) {
         {/* Footer */}
         <div className="pt-3 border-t border-slate-800 text-center">
           <p className="text-[11px] text-slate-400 font-mono">
-            Press <kbd className="text-amber-400 font-bold">Esc</kbd> or click anywhere to close
+            Press <kbd className="text-amber-400 font-bold">Esc</kbd> or click anywhere outside to close
           </p>
         </div>
       </div>
