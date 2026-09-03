@@ -6,8 +6,6 @@ export default function Slide21_ImplementationRoadmap() {
       code: 'AMS',
       title: 'Admission Management System',
       color: 'bg-[#05A872]',
-      badge: 'border-emerald-400 bg-emerald-50 text-emerald-800 font-bold',
-      targetGoLive: 'GO-LIVE: MONTH 10',
       phase1: 'Months 1–3: High-Speed Engine Architecture',
       phase2: 'Months 4–8: Payment Gateway & Portal Build',
       phase3: 'Months 9–10: Peak Testing & Go-Live (M10)',
@@ -16,8 +14,6 @@ export default function Slide21_ImplementationRoadmap() {
       code: 'GMS',
       title: 'Grants Management System',
       color: 'bg-[#05A872]',
-      badge: 'border-emerald-400 bg-emerald-50 text-emerald-800 font-bold',
-      targetGoLive: 'GO-LIVE: MONTH 14',
       phase1: 'Months 1–3: Requirement & Workflow Design',
       phase2: 'Months 4–12: Grants Build & Peer Review',
       phase3: 'Months 13–14: Pilot & Go-Live (M14)',
@@ -26,8 +22,6 @@ export default function Slide21_ImplementationRoadmap() {
       code: 'Nexus',
       title: 'National Matchmaking Hub',
       color: 'bg-[#C5A059]',
-      badge: 'border-amber-400 bg-amber-50 text-amber-900 font-bold',
-      targetGoLive: 'GO-LIVE: MONTH 14',
       phase1: 'Months 1–3: Matching Engine Architecture',
       phase2: 'Months 4–11: Platform Build & BdREN SSO',
       phase3: 'Months 12–14: 50 Roadshows & Go-Live (M14)',
@@ -36,8 +30,6 @@ export default function Slide21_ImplementationRoadmap() {
       code: 'UGC ERP',
       title: 'Central Governance ERP',
       color: 'bg-[#D32F2F]',
-      badge: 'border-red-400 bg-red-50 text-red-800 font-bold',
-      targetGoLive: 'GO-LIVE: MONTH 17',
       phase1: 'Months 1–4: Requirements & 12 Microservices Design',
       phase2: 'Months 5–14: Microservices Build & API Gateway',
       phase3: 'Months 15–17: Pilot & Go-Live (M17)',
@@ -46,8 +38,6 @@ export default function Slide21_ImplementationRoadmap() {
       code: 'UMS-ERP',
       title: 'Unified University ERP',
       color: 'bg-[#2563EB]',
-      badge: 'border-blue-400 bg-blue-50 text-blue-800 font-bold',
-      targetGoLive: 'GO-LIVE: MONTH 17',
       phase1: 'Months 1–4: 8-Division Workshop & Core Design',
       phase2: 'Months 5–13: 18 Core Modules Build',
       phase3: 'Months 14–17: 10 University Customisation & Go-Live (M17)',
@@ -67,9 +57,9 @@ export default function Slide21_ImplementationRoadmap() {
       <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
 
       {/* Top Header */}
-      <div className="relative z-10">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+      <div className="relative z-10 font-sans">
+        <div className="flex items-center justify-between font-sans">
+          <div className="flex items-center gap-2 font-sans">
             <div className="w-6 h-[3px] bg-[#05A872]"></div>
             <span className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#05A872] uppercase font-sans">
               PROGRAMME TIMELINE & PHASING
@@ -115,15 +105,10 @@ export default function Slide21_ImplementationRoadmap() {
               key={t.code}
               className="relative z-10 bg-white border-2 border-slate-300 p-3.5 rounded-xl flex items-center justify-between shadow-sm hover-float transition-all hover:border-[#C5A059] font-sans"
             >
-              <div className="w-56 flex items-center gap-3 shrink-0 border-r-2 border-slate-200 pr-3 font-sans">
+              <div className="w-52 flex items-center gap-3 shrink-0 border-r-2 border-slate-200 pr-3 font-sans">
                 <span className={`w-3 h-10 rounded-full ${t.color}`}></span>
                 <div className="font-sans">
-                  <div className="flex items-center gap-1.5 font-sans">
-                    <span className="text-base font-black text-slate-900 leading-tight font-sans">{t.code}</span>
-                    <span className={`text-xs font-bold px-2 py-0.5 rounded border font-sans ${t.badge}`}>
-                      {t.targetGoLive}
-                    </span>
-                  </div>
+                  <span className="text-lg font-black text-slate-900 leading-tight block font-sans">{t.code}</span>
                   <span className="text-xs text-slate-700 font-bold block font-sans">{t.title}</span>
                 </div>
               </div>

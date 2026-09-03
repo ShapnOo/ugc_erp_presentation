@@ -28,7 +28,7 @@ export default function Slide5_Architecture() {
           
           {/* TIER 1: Governance Tier (Central Authority) */}
           <div className="relative z-10 flex flex-col items-center font-sans">
-            <div className="bg-[#C5A059] text-slate-950 px-10 py-3 rounded-xl shadow-lg font-serif font-black text-center text-xl md:text-2xl border-2 border-amber-300 hover-float cursor-pointer w-full max-w-md">
+            <div className="bg-[#C5A059] text-slate-950 px-10 py-3 rounded-xl shadow-md font-serif font-black text-center text-xl md:text-2xl border-2 border-amber-300 hover-float cursor-pointer w-full max-w-md">
               CENTRAL AUTHORITY (UGC)
               <span className="block font-bold text-xs uppercase tracking-widest text-slate-950 mt-0.5 font-sans">
                 MINISTRY & LEADERSHIP GOVERNANCE DASHBOARDS
@@ -36,9 +36,20 @@ export default function Slide5_Architecture() {
             </div>
           </div>
 
-          {/* CONNECTOR 1: Tier 1 -> Tier 2 */}
-          <div className="flex justify-center my-2 pointer-events-none">
-            <div className="w-0.5 h-6 bg-gradient-to-b from-[#C5A059] to-[#05A872] border-l-2 border-dashed border-[#C5A059] animate-pulse"></div>
+          {/* CONNECTOR 1: Moving Animated Dash Lines (Tier 1 -> Tier 2) */}
+          <div className="relative h-6 w-full my-1 pointer-events-none">
+            <svg className="w-full h-full" fill="none">
+              {/* Central Stem from Tier 1 */}
+              <line x1="50%" y1="0" x2="50%" y2="12" stroke="#C5A059" strokeWidth="2.5" className="animated-dash-line" />
+              {/* Horizontal Moving Bus Line connecting all 5 platforms */}
+              <line x1="10%" y1="12" x2="90%" y2="12" stroke="#C5A059" strokeWidth="2" className="animated-dash-line" />
+              {/* 5 Vertical Drops aligned to column centers (10%, 30%, 50%, 70%, 90%) */}
+              <line x1="10%" y1="12" x2="10%" y2="24" stroke="#D32F2F" strokeWidth="2" className="animated-dash-line" />
+              <line x1="30%" y1="12" x2="30%" y2="24" stroke="#2563EB" strokeWidth="2" className="animated-dash-line" />
+              <line x1="50%" y1="12" x2="50%" y2="24" stroke="#05A872" strokeWidth="2" className="animated-dash-line" />
+              <line x1="70%" y1="12" x2="70%" y2="24" stroke="#D9A74A" strokeWidth="2" className="animated-dash-line" />
+              <line x1="90%" y1="12" x2="90%" y2="24" stroke="#05A872" strokeWidth="2" className="animated-dash-line" />
+            </svg>
           </div>
 
           {/* TIER 2: Five Flagship Platforms Row */}
@@ -65,16 +76,27 @@ export default function Slide5_Architecture() {
             </div>
           </div>
 
-          {/* CONNECTOR 2: Tier 2 -> Tier 3 */}
-          <div className="flex justify-center my-2 pointer-events-none">
-            <div className="w-0.5 h-6 bg-gradient-to-b from-[#05A872] to-[#2563EB] border-l-2 border-dashed border-[#05A872] animate-pulse"></div>
+          {/* CONNECTOR 2: Moving Animated Bus (Tier 2 -> Tier 3) */}
+          <div className="relative h-6 w-full my-1 pointer-events-none">
+            <svg className="w-full h-full" fill="none">
+              {/* 5 Vertical Stems from column centers */}
+              <line x1="10%" y1="0" x2="10%" y2="12" stroke="#D32F2F" strokeWidth="2" className="animated-dash-line" />
+              <line x1="30%" y1="0" x2="30%" y2="12" stroke="#2563EB" strokeWidth="2" className="animated-dash-line" />
+              <line x1="50%" y1="0" x2="50%" y2="12" stroke="#05A872" strokeWidth="2" className="animated-dash-line" />
+              <line x1="70%" y1="0" x2="70%" y2="12" stroke="#D9A74A" strokeWidth="2" className="animated-dash-line" />
+              <line x1="90%" y1="0" x2="90%" y2="12" stroke="#05A872" strokeWidth="2" className="animated-dash-line" />
+              {/* Horizontal Moving Bus Line joining into Common Digital Layer */}
+              <line x1="10%" y1="12" x2="90%" y2="12" stroke="#05A872" strokeWidth="2" className="animated-dash-line" />
+              {/* Central drop into Common Digital Layer */}
+              <line x1="50%" y1="12" x2="50%" y2="24" stroke="#05A872" strokeWidth="2.5" className="animated-dash-line" />
+            </svg>
           </div>
 
           {/* TIER 3: Foundation Layer */}
           <div className="relative z-10 border-2 border-[#05A872] rounded-xl p-3.5 bg-gradient-to-r from-emerald-50 via-amber-50/60 to-emerald-50 shadow-lg transition-all duration-300">
             <div className="text-center mb-2.5">
               <span className="inline-flex items-center gap-2 bg-white border-2 border-[#05A872]/60 px-4 py-1 rounded-full shadow-xs text-xs md:text-sm font-bold text-[#05A872] uppercase tracking-widest font-sans">
-                <span className="w-2 h-2 rounded-full bg-[#05A872] animate-pulse"></span>
+                <span className="w-2 h-2 rounded-full bg-[#05A872]"></span>
                 OUR COMMON DIGITAL LAYER · SHARED IDENTITY · SHARED SECURITY
               </span>
             </div>
@@ -95,14 +117,24 @@ export default function Slide5_Architecture() {
             </div>
           </div>
 
-          {/* CONNECTOR 3: Tier 3 -> Tier 4 */}
-          <div className="flex justify-center my-2 pointer-events-none">
-            <div className="w-0.5 h-6 bg-gradient-to-b from-[#2563EB] to-blue-700 border-l-2 border-dashed border-[#2563EB] animate-pulse"></div>
+          {/* CONNECTOR 3: Moving Animated Bus (Tier 3 -> Tier 4) */}
+          <div className="relative h-6 w-full my-1 pointer-events-none">
+            <svg className="w-full h-full" fill="none">
+              {/* 4 Drops from 4-column centers */}
+              <line x1="12.5%" y1="0" x2="12.5%" y2="12" stroke="#C5A059" strokeWidth="2" className="animated-dash-line" />
+              <line x1="37.5%" y1="0" x2="37.5%" y2="12" stroke="#05A872" strokeWidth="2" className="animated-dash-line" />
+              <line x1="62.5%" y1="0" x2="62.5%" y2="12" stroke="#2563EB" strokeWidth="2" className="animated-dash-line" />
+              <line x1="87.5%" y1="0" x2="87.5%" y2="12" stroke="#D32F2F" strokeWidth="2" className="animated-dash-line" />
+              {/* Horizontal Moving Bus Line */}
+              <line x1="12.5%" y1="12" x2="87.5%" y2="12" stroke="#2563EB" strokeWidth="2" className="animated-dash-line" />
+              {/* Drop into University Banner */}
+              <line x1="50%" y1="12" x2="50%" y2="24" stroke="#2563EB" strokeWidth="2.5" className="animated-dash-line" />
+            </svg>
           </div>
 
           {/* TIER 4: University Tier (Public & Private Universities) */}
           <div className="relative z-10 space-y-3.5 font-sans">
-            <div className="bg-[#1E40AF] text-white py-2.5 px-4 rounded-xl text-center font-serif font-black text-sm md:text-base uppercase tracking-wider shadow-md border-2 border-blue-400 mb-3">
+            <div className="bg-[#1E40AF] text-white py-2.5 px-4 rounded-xl text-center font-serif font-black text-sm md:text-base uppercase tracking-wider shadow-md border-2 border-blue-400 mb-3 hover-float">
               ALL UNIVERSITIES (PUBLIC & PRIVATE) ACROSS ALL 8 DIVISIONS
             </div>
             <div className="grid grid-cols-2 gap-4 text-center font-sans">
