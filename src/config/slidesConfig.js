@@ -21,6 +21,7 @@ import Slide20_LetsBegin from '../slides/Slide20_LetsBegin';
 import Slide21_ImplementationRoadmap from '../slides/Slide21_ImplementationRoadmap';
 import Slide22_SLAModel from '../slides/Slide22_SLAModel';
 import Slide23_ExecutiveSummary from '../slides/Slide23_ExecutiveSummary';
+import Slide24_PartnerProfiles from '../slides/Slide24_PartnerProfiles';
 
 export const SLIDES_CONFIG = [
   {
@@ -320,6 +321,17 @@ export const SLIDES_CONFIG = [
   {
     id: 'slide-23',
     number: '23',
+    title: 'The Consortium Partners',
+    subtitle: 'Systech Digital & Pakiza Software Profiles',
+    category: 'Consortium Partners',
+    component: Slide24_PartnerProfiles,
+    notes: `CONSORTIUM PARTNERS OVERVIEW:
+• Systech Digital Limited (Left): 23+ Years excellence, 500+ projects delivered, 4 global offices, CMMI Level 3 & ISO certified.
+• Pakiza Software Limited (Right): 15+ Years enterprise expertise, 100+ enterprise systems, 100% Dhaka engineering team, Pakiza Group strength.`
+  },
+  {
+    id: 'slide-24',
+    number: '24',
     title: 'Let\'s Begin — Recommended Path Forward',
     subtitle: 'Next Steps',
     category: 'Closing & Next Steps',
